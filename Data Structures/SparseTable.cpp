@@ -107,7 +107,7 @@ int main(){
         int lastPos = n-k;
         for(int i=0;i<k;i++){
             pair<char,int> p = st_min.query(firstPos,lastPos);
-            cout<<s[p.S];
+            cout<<firstPos<<" "<<lastPos<<" "<<s[p.S]<<endl;;
             firstPos= p.S+1;
             lastPos++;
         }
