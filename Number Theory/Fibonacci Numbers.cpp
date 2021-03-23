@@ -16,8 +16,10 @@ using namespace std;
 #define vout(x) for(int i=0;i<x.size();i++) printf("%d ",x[i]);
 #define pie acos(-1)
 
+int val = 0;
 map<ll,int> m;
 ll calcFib(ll n){
+    val++;
     if( n == -1 ) return 0;
     if( n == 0 ) return 1;
     if( n == 1 ) return 1;
@@ -38,7 +40,7 @@ ll calcFib(ll n){
 int main(){
     ll n;
     cin>>n;
-    cout<<calcFib(n-1);
+    cout<<calcFib(n-1)<<" "<<val;
 }
 
 /*
