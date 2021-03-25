@@ -55,12 +55,16 @@ using namespace std;
 - Maximum xor of a subset
   - With no update (offline)
   - With update (online)
-- Sieve of eratosthenes in O(n)
+- Prime Numbers
+  - Sieve of eratosthenes in O(n)
+  - Miller Rabin deterministic primality test
 - C(n,r)
-  - Single query 
-  - Memorization
+  - Single query  	=> recursion
+  - Multiple query  => memorization
 - Stirling number (PIE)
+- Euler totient function
 - Roman Arabic numeral transformation
+- Determinant of a matrix by Gauss method for solving systems of linear equations
 
 #### String
 

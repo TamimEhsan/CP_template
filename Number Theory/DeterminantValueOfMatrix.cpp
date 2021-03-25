@@ -72,15 +72,11 @@ int findSpanningTreeNumber(){
 }
 
 int main(){
-    int n,m;
-    cin>>n>>m;
-    adj.resize(n,vector<int>());
-    for(int i=0;i<m;i++){
-        int a,b;
-        cin>>a>>b;
-        a--; b--;
-        adj[a].pb(b);
-        adj[b].pb(a);
-    }
-    cout<<findSpanningTreeNumber();
+    vector<vector<double>> det
+    {
+        {1, 2, 3},
+        {4, 5, 11},
+        {7, 8, 10}
+    };
+    cout<<determinant(det,det.size()); // 27
 }
