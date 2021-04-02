@@ -47,8 +47,12 @@ using namespace std;
 
 #### Number Theory
 
+- Big Integer (unary, binary operators, binary,unary comparators,gcd)
 - Bigmod
 - Derangement
+- Determinant of a matrix by Gauss method for solving systems of linear equations
+- Euler totient function (1-N in O(N))
+- Faulhaber's triangle (Σi^k upto n)
 - Fibonacci Numbers
   - O(logn) recursive
   - O(logn) matrix exponentiation
@@ -62,9 +66,7 @@ using namespace std;
   - Single query  	=> recursion
   - Multiple query  => memorization
 - Stirling number (PIE)
-- Euler totient function
 - Roman Arabic numeral transformation
-- Determinant of a matrix by Gauss method for solving systems of linear equations
 
 #### String
 
