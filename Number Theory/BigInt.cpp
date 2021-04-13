@@ -13,8 +13,6 @@ using namespace std;
 #define S second
 #define mp make_pair
 #define pb push_back
-//#define ll long long
-//#define ull unsigned long long
 #define M 1000000007
 #define FASTIO ios_base::sync_with_stdio(false);cin.tie(NULL); cout.tie(NULL);
 #define take(x) scanf("%d",&x)
@@ -23,7 +21,6 @@ using namespace std;
 #define pie acos(-1)
 #define MOD 1000000007
 #define MAX 1000005
-using namespace std;
 typedef long long ll;
 typedef unsigned long long ull;
 typedef pair<int,int> P;

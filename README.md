@@ -34,6 +34,7 @@ using namespace std;
 
 ####  Data Structures
 
+- Disjoint Set Union
 - MO's Algorithm
 - Ordered statistics tree
 - Range Max Query Segment tree with lazy propagation
@@ -41,12 +42,13 @@ using namespace std;
 
 #### Graph Theory
 
-- Dynamic Connectivity
+- Dynamic Connectivity (DSU online)
 - Lowest Common Ancestor using sparse table
 - Kirchoff's Minimum Spanning tree number
 
 #### Number Theory
 
+- Berlekamp–Massey for finding linear recurrance
 - Big Integer (unary, binary operators, binary,unary comparators,gcd)
 - Bigmod
 - Derangement
@@ -60,13 +62,14 @@ using namespace std;
   - With no update (offline)
   - With update (online)
 - Prime Numbers
-  - Sieve of eratosthenes in O(n)
+  - Sieve of Eratosthenes in O(n)
   - Miller Rabin deterministic primality test
 - C(n,r)
   - Single query  	=> recursion
   - Multiple query  => memorization
 - Stirling number (PIE)
 - Roman Arabic numeral transformation
+- Sum of divisors from 1 to N
 
 #### String
 
