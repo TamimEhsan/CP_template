@@ -12,6 +12,7 @@
 - [Geometry: Polygon Algorithms](https://codeforces.com/blog/entry/48868)
 - [Hashing](https://codeforces.com/blog/entry/60445)
 - [Dynamic Convex Hull](https://codeforces.com/blog/entry/75929)
+- [Fast and furious C++ I/O](https://codeforces.com/blog/entry/45835)
 - 
 
 
@@ -26,3 +27,15 @@
 - a+b=a|b+a&b
 - a⊕b=a|b—a&b
 - gcd(a,b) = gcd(a,a-b) = gcd(a,a%b)
+- gcd(a^m−1, a^n−1) = a^gcd(m,n)−1
+
+- To count the number of occurrences of an element in a range, we can  carry for each element a vector containing all the positions it occurs  in increasing order. Then, `upper_bound(r)-lower_bound(l)` gives us the number of occurrences in O(log(n)).
+
+#### Catalan Numbers
+
+For n = 0, 1, 2, 3, … values of Catalan numbers are 1, 1, 2, 5, 14, 42, 132, 429, 1430, 4862
+
+Catalan number Cn = (2n)! / ((n + 1)! * n!)
+
+- Total number of possible Binary Search Trees with n different keys is Catalan(n)
+- Total number of possible Binary Trees with n different keys is Catalan(n)*n!

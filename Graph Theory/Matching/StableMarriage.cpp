@@ -2,7 +2,7 @@
 const int maxn=1050;
 queue<int> q;
 int future_wife[maxn],future_husband[maxn],
-order[maxn][maxn],perfer[maxn][maxn],nextt[maxn];
+order[maxn][maxn],prefer[maxn][maxn],nextt[maxn];
 //order[i][j]=indexOfMan i in j-th women'sListOfPreference
 //prefer[i]=listOfWomen inOrderOf decreasingPreference
 void engage(int man,int woman) {
@@ -22,7 +22,7 @@ void stableMarriage() {
     int n,x;scanf("%d",&n);
     for(int i=1; i<=n; i++) {
         for(int j=1; j<=n; j++)
-            scanf("%d",&perfer[i][j]);
+            scanf("%d",&prefer[i][j]);
         nextt[i]=1;q.push(i);future_wife[i]=0;
     }
     for(int i=1; i<=n; i++) {
@@ -32,7 +32,7 @@ void stableMarriage() {
     }
     while(!q.empty()) {
         int man=q.front();q.pop();
-        int woman=perfer[man][nextt[man]++];
+        int woman=prefer[man][nextt[man]++];
         if(future_husband[woman]==0)engage(man,woman);
         else if(order[woman][man]<order[woman][future_husband[woman]])engage(man,woman);
         else q.push(man);

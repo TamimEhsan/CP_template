@@ -42,9 +42,13 @@ using namespace std;
 
 #### Graph Theory
 
-- Dynamic Connectivity (DSU online)
+- Connectivity
+  - Dynamic Connectivity (DSU online)
+- Matching
+  - Stable marriage
 - Lowest Common Ancestor using sparse table
-- Kirchoff's Minimum Spanning tree number
+- Minimum Spanning Tree
+  - Kirchoff's Minimum Spanning tree number
 
 #### Number Theory
 
