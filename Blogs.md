@@ -14,12 +14,27 @@
 - [Dynamic Convex Hull](https://codeforces.com/blog/entry/75929)
 - [Fast and furious C++ I/O](https://codeforces.com/blog/entry/45835)
 - [Centroid Decomposition on a tree(Beginner)](https://codeforces.com/blog/entry/73707)
+- [Number Theory in Competitive Programming](https://artofproblemsolving.com/community/c90633h1291397) 
+- [[Tutorial] Burnside's lemma (with example)](https://codeforces.com/blog/entry/62401)
 - 
 
 
 
 - https://codeforces.com/blog/entry/57282
 - [The On-Line Encyclopedia of Integer Sequences](https://oeis.org/)
+
+
+
+## Learning Websites
+
+- USACO guide](https://usaco.guide/adv/LC?lang=cpp)
+
+
+
+## Practice Platforms
+
+- [LighOJ](https://lightoj.com/home)
+- [CSES problemset](https://cses.fi/problemset/)
 
 ## Simple tricks
 
@@ -33,3 +48,4 @@
 - To count the number of occurrences of an element in a range, we can  carry for each element a vector containing all the positions it occurs  in increasing order. Then, `upper_bound(r)-lower_bound(l)` gives us the number of occurrences in O(log(n)).
 
 - Number of topological sorting of a directed tree of n node is n!/( ∏ sz(v) ) where sz(v) is subtree size of node v.
+
