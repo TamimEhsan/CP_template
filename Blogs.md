@@ -16,7 +16,14 @@
 - [Centroid Decomposition on a tree(Beginner)](https://codeforces.com/blog/entry/73707)
 - [Number Theory in Competitive Programming](https://artofproblemsolving.com/community/c90633h1291397) 
 - [[Tutorial] Burnside's lemma (with example)](https://codeforces.com/blog/entry/62401)
-- 
+- [[Tutorial] Math note — linear sieve](https://codeforces.com/blog/entry/54090)
+- [[Tutorial] Math note — Möbius inversion](https://codeforces.com/blog/entry/53925) 
+- [[Tutorial] Math note — Dirichlet convolution](https://codeforces.com/blog/entry/54150)
+- [[Tutorial] Generating Functions in Competitive Programming (Part 1)](https://codeforces.com/blog/entry/77468) 
+- [[Tutorial] Generating Functions in Competitive Programming (Part 2)](https://codeforces.com/blog/entry/77551) 
+- [[Tutorial] Non-trivial DP Tricks and Techniques](https://codeforces.com/blog/entry/47764) 
+- [[Tutorial] Slope Trick](https://codeforces.com/blog/entry/47821) 
+- [[Tutorial] Matroid intersection in simple words](https://codeforces.com/blog/entry/69287) 
 
 
 
@@ -39,13 +46,24 @@
 ## Simple tricks
 
 - gcd(F(n),F(m)) = F(gcd(n,m)) where F(n) is nth fib with first two term as 0,1
+
 - a+b=a⊕b+2(a&b)
+
 - a+b=a|b+a&b
+
 - a⊕b=a|b—a&b
+
 - gcd(a,b) = gcd(a,a-b) = gcd(a,a%b)
+
 - gcd(a^m−1, a^n−1) = a^gcd(m,n)−1
 
 - To count the number of occurrences of an element in a range, we can  carry for each element a vector containing all the positions it occurs  in increasing order. Then, `upper_bound(r)-lower_bound(l)` gives us the number of occurrences in O(log(n)).
 
 - Number of topological sorting of a directed tree of n node is n!/( ∏ sz(v) ) where sz(v) is subtree size of node v.
+
+- Lucas Theorem:  
+
+  P is the prime which is to be take, No = N%P and Mo = M%P.
+
+  ![](https://latex.artofproblemsolving.com/6/3/2/6328ada5b024e69de1004c54c80e379fc8bff64f.png) 
 

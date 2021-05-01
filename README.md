@@ -35,6 +35,8 @@ using namespace std;
 ####  Data Structures
 
 - Disjoint Set Union
+- Fractions
+- Matrix
 - MO's Algorithm
 - Ordered statistics tree
 - Range Max Query Segment tree with lazy propagation
