@@ -68,6 +68,7 @@ int my_rand(int l, int r){return uniform_int_distribution<int>(l,r) (rng);}
 - Fibonacci Numbers
   - O(logn) recursive
   - O(logn) matrix exponentiation
+- Harmonic Progression (sum over floor of n over i)
 - Maximum xor of a subset
   - With no update (offline)
   - With update (online)
@@ -82,6 +83,7 @@ int my_rand(int l, int r){return uniform_int_distribution<int>(l,r) (rng);}
 - C(n,r)
   - Single query  	=> recursion
   - Multiple query  => memorization
+  - Lucas Theorem (NcR mod)
 - Stirling number (PIE)
 - Roman Arabic numeral transformation
 - Sum of divisors from 1 to N
