@@ -32,6 +32,14 @@
 
 
 
+## Video Lectures:
+
+- [Snackdown Training Camp, Day 1](https://blog.codechef.com/2016/07/11/snackdown-training-camp-day-1/) 
+- [Snackdown Training Camp, Day 2](https://blog.codechef.com/2016/07/17/snackdown-training-camp-2016-day-2/)
+
+- [Snackdown Training Camp, Day 3](https://blog.codechef.com/2016/07/17/snackdown-training-camp-day-3/)
+- 
+
 ## Learning Websites
 
 - USACO guide](https://usaco.guide/adv/LC?lang=cpp)

@@ -26,6 +26,9 @@ using namespace std;
 #define vout(x) for(int i=0;i<x.size();i++) printf("%d ",x[i]);
 #define pie acos(-1)
 #define MOD 998244353
+
+mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
+int my_rand(int l, int r){return uniform_int_distribution<int>(l,r) (rng);}
 ```
 
 
@@ -46,6 +49,7 @@ using namespace std;
 
 - Connectivity
   - Dynamic Connectivity (DSU online)
+  - Strongly Connected Component
 - Matching
   - Stable marriage
 - Lowest Common Ancestor using sparse table
@@ -54,7 +58,7 @@ using namespace std;
 
 #### Number Theory
 
-- Berlekamp–Massey for finding linear recurrance
+- Berlekamp–Massey for finding linear recurrence
 - Big Integer (unary, binary operators, binary,unary comparators,gcd)
 - Bigmod
 - Derangement
@@ -70,6 +74,11 @@ using namespace std;
 - Prime Numbers
   - Sieve of Eratosthenes in O(n)
   - Miller Rabin deterministic primality test
+- Linear sieve for Multiplicative Functions
+  - Prime numbers
+  - Divisor Count
+  - Divisor Sum
+  - Mobius Function
 - C(n,r)
   - Single query  	=> recursion
   - Multiple query  => memorization
