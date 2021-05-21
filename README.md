@@ -31,6 +31,8 @@ mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 int my_rand(int l, int r){return uniform_int_distribution<int>(l,r) (rng);}
 ```
 
+ <!-- Check the other extensions later C:\MinGW\lib\gcc\mingw32\9.2.0\include\c++\ext\pb_ds\detail -->
+
 
 
 ## Topics
@@ -42,6 +44,8 @@ int my_rand(int l, int r){return uniform_int_distribution<int>(l,r) (rng);}
 - Matrix
 - MO's Algorithm
 - Ordered statistics tree
+  - Built In
+  - Fenwick tree
 - Range Max Query Segment tree with lazy propagation
 - Sparse Table for Range Query with no update
 
