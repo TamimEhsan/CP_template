@@ -24,6 +24,11 @@
 - [[Tutorial] Non-trivial DP Tricks and Techniques](https://codeforces.com/blog/entry/47764) 
 - [[Tutorial] Slope Trick](https://codeforces.com/blog/entry/47821) 
 - [[Tutorial] Matroid intersection in simple words](https://codeforces.com/blog/entry/69287) 
+- [SOS Dynamic Programming [Tutorial]](https://codeforces.com/blog/entry/45223) 
+- [Dynamic Programming Optimizations](https://codeforces.com/blog/entry/8219)
+- [1D/1D Dynamic Programming Optimization - Part I](https://sites.google.com/site/ubcprogrammingteam/news/1d1ddynamicprogrammingoptimization-parti?authuser=0)
+- [বিটমাস্ক ডাইনামিক প্রোগ্রামিং](https://www.shafaetsplanet.com/?p=1357)
+- 
 
 
 
@@ -34,15 +39,16 @@
 
 ## Video Lectures:
 
+- [CodeChef's Indian Programming Camp 2016](https://youtube.com/playlist?list=PLi0ZM-RCX5nsTc2Z6woHr5qoF6n3b-thO)
 - [Snackdown Training Camp, Day 1](https://blog.codechef.com/2016/07/11/snackdown-training-camp-day-1/) 
 - [Snackdown Training Camp, Day 2](https://blog.codechef.com/2016/07/17/snackdown-training-camp-2016-day-2/)
-
 - [Snackdown Training Camp, Day 3](https://blog.codechef.com/2016/07/17/snackdown-training-camp-day-3/)
 - 
 
 ## Learning Websites
 
-- USACO guide](https://usaco.guide/adv/LC?lang=cpp)
+- [USACO guide](https://usaco.guide/adv/LC?lang=cpp) 
+- [ শাফায়েতের ব্লগ](https://www.shafaetsplanet.com/)
 
 
 

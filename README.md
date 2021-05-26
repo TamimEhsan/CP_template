@@ -40,6 +40,9 @@ int my_rand(int l, int r){return uniform_int_distribution<int>(l,r) (rng);}
 ####  Data Structures
 
 - Disjoint Set Union
+- Fenwick Tree
+  - Prefix Sum 
+    - Point update, Range query
 - Fractions
 - Matrix
 - MO's Algorithm
