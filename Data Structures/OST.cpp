@@ -64,7 +64,7 @@ public:
     }
 
     void insert(int x){
-        if( find(x) or x<=0 or x>=BIT.size() ) return;
+        if( /*find(x) or*/ x<=0 or x>=BIT.size() ) return;
         update(x, 1);
     }
 
@@ -90,7 +90,7 @@ public:
 };
 int main(){
     OST s(100); // we can add numbers from 1 to 99
-    s.insert(1);
+    s.insert(1);s.insert(1);
     s.insert(2);
     s.insert(4);
     s.insert(8);
@@ -100,7 +100,7 @@ int main(){
 
     cout<<s.find_by_order(1)<<endl; // 1
     cout<<s.find_by_order(2)<<endl; // 2
-    cout<<s.find_by_order(4)<<endl; // 4
+    cout<<s.find_by_order(4)<<endl; // 8
 
     cout<<s.find_by_order(6)<<endl; // 100 = size means the element is not in set
     cout<<endl;

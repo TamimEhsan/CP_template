@@ -55,6 +55,7 @@ bool check(int N,int pos){return (bool)(N & (1<<pos));}
   - Fenwick tree
 - Range Max Query Segment tree with lazy propagation
 - Sparse Table for Range Query with no update
+- Unordered Map with Custom Hash
 
 #### Graph Theory
 

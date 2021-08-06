@@ -18,6 +18,13 @@ using namespace std;
 #define MOD 998244353
 
 /*
+    Sparse table may be used for a range query where
+    the existence of an element matters, but not the count of
+    the element. ie just presence.
+    example: min,max,gcd,and etc
+    not possible: xor,sum etc
+*/
+/*
     All the datatypes T should be same
     for the comparator function, the return type and parameters too
 */

@@ -37,6 +37,12 @@
 
 
 
+## Github Repositories:
+
+- [competitive-programming-library](https://github.com/mochow13/competitive-programming-library)
+- [ACM Library](https://github.com/AnikSarker/ACM-Library)
+- [AlgoVault](https://github.com/sgtlaugh/algovault)
+
 ## Video Lectures:
 
 - [CodeChef's Indian Programming Camp 2016](https://youtube.com/playlist?list=PLi0ZM-RCX5nsTc2Z6woHr5qoF6n3b-thO)
