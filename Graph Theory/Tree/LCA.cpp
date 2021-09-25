@@ -116,7 +116,7 @@ int main(){
         int n;
         cin>>n;
         adj.clear(); first.clear(); euler.clear(); vis.clear();
-        adj.resize(n,vector<int>()); first.resize(n,0); euler.resize(n,{0,0});
+        adj.resize(n,vector<int>()); first.resize(n,0); //euler.resize(n,{0,0});
         for(int i=0;i<n-1;i++){
             int a,b;
             cin>>a>>b;

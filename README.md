@@ -92,6 +92,7 @@ bool check(int N,int pos){return (bool)(N & (1<<pos));}
   - Divisor Count
   - Divisor Sum
   - Mobius Function
+- Linear Recurrence solve
 - C(n,r)
   - Single query  	=> recursion
   - Multiple query  => memorization

@@ -27,6 +27,12 @@ typedef tree < int,  null_type,  less < int >,  rb_tree_tag,  tree_order_statist
 typedef tree < pair < int, int >,  null_type,  less < pair < int, int > >,  rb_tree_tag,  tree_order_statistics_node_update > o_setp;
  o_set s;
 
+ /*
+ s.insert(1);
+ s.find(18))
+ *s.find_by_order(1)
+ s.order_of_key(4)
+ */
 
 /**
 the tree supports the same operations as the set

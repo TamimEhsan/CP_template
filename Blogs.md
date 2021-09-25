@@ -1,5 +1,6 @@
 # Important Blogs
 
+- **[The Ultimate Topic List (with Resources, Problems and Templates)](https://codeforces.com/blog/entry/95106)**
 - [Linear Recurrence and Berlekamp-Massey Algorithm](https://codeforces.com/blog/entry/61306) 
 - [Basic Lagrange Interpolation](https://codeforces.com/blog/entry/82953)
 - [Matrix Expotentiation](https://codeforces.com/blog/entry/80195)
@@ -67,6 +68,11 @@
 
 - gcd(F(n),F(m)) = F(gcd(n,m)) where F(n) is nth fib with first two term as 0,1
 
+- for (int x = m; x; ) { --x &= m; ... } loops
+  over all subset masks of m (except m itself).
+
+- x & -x is the least bit in x.
+
 - a+b=a⊕b+2(a&b)
 
 - a+b=a|b+a&b
@@ -87,3 +93,6 @@
 
   ![](https://latex.artofproblemsolving.com/6/3/2/6328ada5b024e69de1004c54c80e379fc8bff64f.png) 
 
+- For summation of series with precision upto certain decimal, sometimes we can use integration to approximate an answer.
+
+  eg. sum(1/x) for x = 1 to 10^18, we can precalculate answer upto 10^7 and add the rest with ∫(1/x) dx => ln(x), so answer will be prec[1e7] + ln(1e18) - ln(1e7)
