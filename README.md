@@ -41,7 +41,7 @@ bool check(int N,int pos){return (bool)(N & (1<<pos));}
 
 ## Topics
 
-####  Data Structures
+###  `Data Structures`
 
 - Disjoint Set Union
 - Fenwick Tree
@@ -57,18 +57,25 @@ bool check(int N,int pos){return (bool)(N & (1<<pos));}
 - Sparse Table for Range Query with no update
 - Unordered Map with Custom Hash
 
-#### Graph Theory
+### `Graph Theory`
 
-- Connectivity
-  - Dynamic Connectivity (DSU online)
-  - Strongly Connected Component
-- Matching
-  - Stable marriage
+#### 	Connectivity
+
+- Dynamic Connectivity (DSU online)
+
+- Strongly Connected Component
+
+  #### Matching
+
+- Stable marriage
+
 - Lowest Common Ancestor using sparse table
-- Minimum Spanning Tree
-  - Kirchoff's Minimum Spanning tree number
 
-#### Number Theory
+  #### Minimum Spanning Tree
+
+  Kirchoff's Minimum Spanning tree number
+
+### `Number Theory`
 
 - Berlekamp–Massey for finding linear recurrence
 - Big Integer (unary, binary operators, binary,unary comparators,gcd)
@@ -76,6 +83,8 @@ bool check(int N,int pos){return (bool)(N & (1<<pos));}
 - Derangement
 - Determinant of a matrix by Gauss method for solving systems of linear equations
 - Euler totient function (1-N in O(N))
+- Fast Fourier Transformation
+- Fast Walsh Hadamard Transformation
 - Faulhaber's triangle (Σi^k upto n)
 - Fibonacci Numbers
   - O(logn) recursive
@@ -101,10 +110,13 @@ bool check(int N,int pos){return (bool)(N & (1<<pos));}
 - Roman Arabic numeral transformation
 - Sum of divisors from 1 to N
 
-#### String
+### `String`
 
 - Aho Corasick Algorithm
+- Prefix function
+- String Hashing (Double hashing)
 - Suffix Array
   - Suffix Array Generation
   - Substring Search
   - Lowest Common Prefix
+- Z function

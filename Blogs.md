@@ -1,6 +1,7 @@
 # Important Blogs
 
 - **[The Ultimate Topic List (with Resources, Problems and Templates)](https://codeforces.com/blog/entry/95106)**
+- [**`The Ultimate Topic List (with Resources, Problems and Templates(Updated)`**](https://shahjalalshohag.github.io/topic-list/)
 - [Linear Recurrence and Berlekamp-Massey Algorithm](https://codeforces.com/blog/entry/61306) 
 - [Basic Lagrange Interpolation](https://codeforces.com/blog/entry/82953)
 - [Matrix Expotentiation](https://codeforces.com/blog/entry/80195)

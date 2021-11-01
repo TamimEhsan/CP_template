@@ -1,4 +1,7 @@
 //Determinant + Inverse Tested : Codechef - CSTREE
+//1 indexed
+// Matrix entry is A.m[i,j]
+
 
 #include<bits/stdc++.h>
 using namespace std;
@@ -155,7 +158,7 @@ bool Freivalds(Matrix A,Matrix B,Matrix C){
                 q[i] += p[j] * B.m[i][j];
         for(int i=1;i<=n;i++) for(int j=1;j<=n;j++)
                 q[i] -= r[j] * C.m[i][j];
-        
+
         bool All = true;
         for(int i=1;i<=n;i++) if(q[i]) All=false;
         if(All) Yes++;
