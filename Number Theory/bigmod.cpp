@@ -3,13 +3,28 @@ using namespace std;
 #define M 1000000007
 #define ll long long
 
-ll bigmod(ll x,int pow){
-    if( pow == 0 ) return 1;
-    ll mul = bigmod( x,pow/2 );
-    if( pow%2 == 0 ) return (mul*mul)%M;
-    return ((mul*mul)%M*x)%M;
+long long bigmod(long long a, long long b, long long m) {
+    a %= m;
+    long long res = 1;
+    while (b > 0) {
+        if (b & 1)
+            res = res * a % m;
+        a = a * a % m;
+        b >>= 1;
+    }
+    return res;
 }
 
+
 int main(){
-    cout<<bigmod(2,4);
+    cout<<bigmod(2,4,M);
 }
+
+
+/*
+    To compute A^(B^C) % MOD
+    where MOD is a prime
+
+    Result = bigmod( A, bigmod(B,C,MOD-1),MOD)
+
+*/

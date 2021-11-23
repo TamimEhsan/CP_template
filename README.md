@@ -65,15 +65,21 @@ bool check(int N,int pos){return (bool)(N & (1<<pos));}
 
 - Strongly Connected Component
 
-  #### Matching
+#### Matching
 
 - Stable marriage
 
 - Lowest Common Ancestor using sparse table
 
-  #### Minimum Spanning Tree
+#### Minimum Spanning Tree
 
-  Kirchoff's Minimum Spanning tree number
+- Kirchoff's Minimum Spanning tree number
+
+#### Tree
+
+- Lowest Common Ancestor using sparse table
+- Centroid Decomposition
+- Heavy Light Decomposition
 
 ### `Number Theory`
 
@@ -113,6 +119,7 @@ bool check(int N,int pos){return (bool)(N & (1<<pos));}
 ### `String`
 
 - Aho Corasick Algorithm
+- Palindromic Tree
 - Prefix function
 - String Hashing (Double hashing)
 - Suffix Array

@@ -39,6 +39,11 @@
 
 
 
+## Important Tools:
+
+- [Graph editor](https://csacademy.com/app/graph_editor/)
+- [The On-Line Encyclopedia of Integer Sequences (OEIS)](https://oeis.org/)
+
 ## Github Repositories:
 
 - [competitive-programming-library](https://github.com/mochow13/competitive-programming-library)
