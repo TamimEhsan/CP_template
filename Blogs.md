@@ -2,6 +2,10 @@
 
 - **[The Ultimate Topic List (with Resources, Problems and Templates)](https://codeforces.com/blog/entry/95106)**
 - [**`The Ultimate Topic List (with Resources, Problems and Templates(Updated)`**](https://shahjalalshohag.github.io/topic-list/)
+- **[The Ultimate Equation List](https://blog.shahjalalshohag.com/equation-list/)**
+- [Codeforce Catalogue](https://codeforces.com/catalog)
+- [Top 10 best Codeforces blog posts of 2021 (in my humble opinion)](https://codeforces.com/blog/entry/98250)
+- [Things I don't know](https://codeforces.com/blog/entry/92248)
 - [Linear Recurrence and Berlekamp-Massey Algorithm](https://codeforces.com/blog/entry/61306) 
 - [Basic Lagrange Interpolation](https://codeforces.com/blog/entry/82953)
 - [Matrix Expotentiation](https://codeforces.com/blog/entry/80195)
@@ -18,6 +22,7 @@
 - [Centroid Decomposition on a tree(Beginner)](https://codeforces.com/blog/entry/73707)
 - [Number Theory in Competitive Programming](https://artofproblemsolving.com/community/c90633h1291397) 
 - [[Tutorial] Burnside's lemma (with example)](https://codeforces.com/blog/entry/62401)
+- [[Video]Burnside's lemma: counting up to symmetries](https://www.youtube.com/watch?v=D0d9bYZ_qDY&t=674s)
 - [[Tutorial] Math note — linear sieve](https://codeforces.com/blog/entry/54090)
 - [[Tutorial] Math note — Möbius inversion](https://codeforces.com/blog/entry/53925) 
 - [[Tutorial] Math note — Dirichlet convolution](https://codeforces.com/blog/entry/54150)
@@ -30,6 +35,7 @@
 - [Dynamic Programming Optimizations](https://codeforces.com/blog/entry/8219)
 - [1D/1D Dynamic Programming Optimization - Part I](https://sites.google.com/site/ubcprogrammingteam/news/1d1ddynamicprogrammingoptimization-parti?authuser=0)
 - [বিটমাস্ক ডাইনামিক প্রোগ্রামিং](https://www.shafaetsplanet.com/?p=1357)
+- [Persistent segment tree ( Problems )](https://codeforces.com/blog/entry/56880)
 - 
 
 

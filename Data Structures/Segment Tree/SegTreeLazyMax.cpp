@@ -29,7 +29,7 @@ void build(int pos,int l,int r){
     }
     int mid = (l+r)/2;
     build(pos*2,l,mid);
-    build(pos*2,mid+1,r);
+    build(pos*2+1,mid+1,r);
     segtree[pos] = max( segtree[pos*2],segtree[pos*2+1] );
 }
 

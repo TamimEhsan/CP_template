@@ -7,6 +7,8 @@ using namespace std;
 // of characters starting from the position i that coincide
 // with the first characters of s.
 
+// 0 indexed
+
 vector<int> z_function(string s) {
     int n = (int) s.length();
     vector<int> z(n);

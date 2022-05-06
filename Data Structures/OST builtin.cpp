@@ -40,7 +40,12 @@ but also there are two new features —
 find_by_order() : The first returns an iterator to the k-th largest element (counting from zero)
 order_of_key() : The number of items in a set that are strictly smaller than our item.
 */
-
+/**
+To store duplicate values:
+Store as {key,index}
+To search search all by {key,Max value
+or we can also search in a range [0,index] i guess using {key,index}
+*/
 int main(){
 
     s.insert(1);

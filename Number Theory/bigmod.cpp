@@ -28,3 +28,10 @@ int main(){
     Result = bigmod( A, bigmod(B,C,MOD-1),MOD)
 
 */
+
+/*
+    To compute (a*b*c*d)^(e*f*g*h)
+    mod a*b*c*d with M
+    but e*f*g*h with M-1
+    cause $a^b \equiv a^{b \bmod (p - 1)} \pmod{p}$
+*/
