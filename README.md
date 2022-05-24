@@ -47,7 +47,9 @@ bool check(int N,int pos){return (bool)(N & (1<<pos));}
 - Fenwick Tree
   - Prefix Sum 
     - Point update, Range query
+  - Distinct values in a range
 - Fractions
+- Implicit Treap
 - Matrix
 - MO's Algorithm
 - Ordered statistics tree
@@ -55,21 +57,33 @@ bool check(int N,int pos){return (bool)(N & (1<<pos));}
   - Fenwick tree
 - Range Max Query Segment tree with lazy propagation
 - Sparse Table for Range Query with no update
+- Segment tree
+  - 2D segment tree
+  - Lazy propagation
+
+- Merge sort tree
 - Unordered Map with Custom Hash
+
+### `Geometry`
+
+- Convex Hull
+- Line segment intersection
+- Polygon area
 
 ### `Graph Theory`
 
 #### 	Connectivity
 
+- Articulation Point
+- Bridge
+- Dijkstra
 - Dynamic Connectivity (DSU online)
-
+- Floyd Warshall (all pair shortest path)
 - Strongly Connected Component
 
 #### Matching
 
 - Stable marriage
-
-- Lowest Common Ancestor using sparse table
 
 #### Minimum Spanning Tree
 
@@ -77,37 +91,40 @@ bool check(int N,int pos){return (bool)(N & (1<<pos));}
 
 #### Tree
 
-- Lowest Common Ancestor using sparse table
 - Centroid Decomposition
 - Heavy Light Decomposition
+- Lowest Common Ancestor using sparse table
+- Subtree queries
 
 ### `Number Theory`
 
 - Berlekamp–Massey for finding linear recurrence
 - Big Integer (unary, binary operators, binary,unary comparators,gcd)
 - Bigmod
+- Catalan's Number
 - Derangement
 - Determinant of a matrix by Gauss method for solving systems of linear equations
 - Euler totient function (1-N in O(N))
+- Faulhaber's triangle (Σi^k upto n)
 - Fast Fourier Transformation
 - Fast Walsh Hadamard Transformation
-- Faulhaber's triangle (Σi^k upto n)
 - Fibonacci Numbers
   - O(logn) recursive
   - O(logn) matrix exponentiation
 - Harmonic Progression (sum over floor of n over i)
+- Linear Recurrance
+- Linear sieve for Multiplicative Functions
+  - Prime numbers
+  - Divisor Count
+  - Divisor Sum
+  - Mobius Function
 - Maximum xor of a subset
   - With no update (offline)
   - With update (online)
 - Prime Numbers
   - Sieve of Eratosthenes in O(n)
   - Miller Rabin deterministic primality test
-- Linear sieve for Multiplicative Functions
-  - Prime numbers
-  - Divisor Count
-  - Divisor Sum
-  - Mobius Function
-- Linear Recurrence solve
+- PIE
 - C(n,r)
   - Single query  	=> recursion
   - Multiple query  => memorization
@@ -125,5 +142,6 @@ bool check(int N,int pos){return (bool)(N & (1<<pos));}
 - Suffix Array
   - Suffix Array Generation
   - Substring Search
-  - Lowest Common Prefix
+  - Longest Common Prefix
+- Suffix automaton
 - Z function
