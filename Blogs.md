@@ -30,6 +30,7 @@
 - [[Tutorial] Generating Functions in Competitive Programming (Part 2)](https://codeforces.com/blog/entry/77551) 
 - [[Tutorial] Non-trivial DP Tricks and Techniques](https://codeforces.com/blog/entry/47764) 
 - [[Tutorial] Slope Trick](https://codeforces.com/blog/entry/47821) 
+- [[Tutorial] Convex Hull Trick — Geometry being useful](https://codeforces.com/blog/entry/63823)
 - [[Tutorial] Matroid intersection in simple words](https://codeforces.com/blog/entry/69287) 
 - [SOS Dynamic Programming [Tutorial]](https://codeforces.com/blog/entry/45223) 
 - [Dynamic Programming Optimizations](https://codeforces.com/blog/entry/8219)
