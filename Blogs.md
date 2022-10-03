@@ -36,11 +36,12 @@
 - [1D/1D Dynamic Programming Optimization - Part I](https://sites.google.com/site/ubcprogrammingteam/news/1d1ddynamicprogrammingoptimization-parti?authuser=0)
 - [বিটমাস্ক ডাইনামিক প্রোগ্রামিং](https://www.shafaetsplanet.com/?p=1357)
 - [Persistent segment tree ( Problems )](https://codeforces.com/blog/entry/56880)
-- 
+- [Lecture #3 — Exchange arguments (sorting with dp)](https://codeforces.com/blog/entry/63533)
+- [[Video] Hackenbush](https://www.youtube.com/watch?v=ZYj4NkeGPdM)
 
 
 
-- https://codeforces.com/blog/entry/57282
+- https://codeforces.com/blog/entry/57282s
 - [The On-Line Encyclopedia of Integer Sequences](https://oeis.org/)
 
 
@@ -68,6 +69,7 @@
 
 - [USACO guide](https://usaco.guide/adv/LC?lang=cpp) 
 - [ শাফায়েতের ব্লগ](https://www.shafaetsplanet.com/)
+- [Algo Wiki](https://wiki.algo.is/_index)
 
 
 

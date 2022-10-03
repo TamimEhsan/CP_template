@@ -145,3 +145,8 @@ bool check(int N,int pos){return (bool)(N & (1<<pos));}
   - Longest Common Prefix
 - Suffix automaton
 - Z function
+
+### `DP`
+
+- Convex Hull Trick Generalized
+- Convex Hull Trick Monotonous
