@@ -1,16 +1,13 @@
 /*****************************************/
-/**
 Fully Generalized implementation for Monotone slope,Arbitrary query
-runtime insert() O(1)
-        query() O(logn)
-**/
+runtime insert() O(1) query() O(logn)
+/********************/
 class MonotoneCHT{
     deque<Line> Q;
     int type;
     void insertBack(Line nl)
     {
-        //handle parallel line insertion,there cannot be more than
-        //one parallel line to new line currently inside Q;
+        //handle parallel line insertion,there cannot be more than one parallel line to new line currently inside Q;
         if(!Q.empty()&&Q.back().parallel(nl))
         {
             if(type<2)
@@ -34,8 +31,7 @@ class MonotoneCHT{
     }
     void insertFront(Line nl)
     {
-        //handle parallel line insertion,there cannot be more than one
-        //parallel line to new line currently inside Q;
+        //handle parallel line insertion,there cannot be more than one parallel line to new line currently inside Q;
         if(!Q.empty()&&Q[0].parallel(nl))
         {
             if(type<2)
@@ -73,8 +69,7 @@ class MonotoneCHT{
         return {l,r};
     }
 public:
-    //slope increasing or decreasing
-    //(not query point,query point is arbitrary),querying for maximum or minimum
+    //slope increasing or decreasing(not query point,query point is arbitrary),querying for maximum or minimum
     MonotoneCHT(bool increasing,bool maximum)
     {
         type=increasing;
@@ -88,8 +83,7 @@ public:
         else
             insertFront(nl);
     }
-    //if monotone query satisfied //not tested,although it should be ok
-    ll fastQuery(ll x)
+    ll fastQuery(ll x)//if monotone query satisfied //not tested,although it should be ok
     {
         #ifdef INCREASING_QUERY
         while(Q.size()>1&&Q[0].intersect(Q[1]).first<x)
@@ -114,11 +108,8 @@ public:
     }
 };
 /***********************************************/
-
 /***********set based implementation
-source:https://github.com/kth-competitive-programming/
-kactl/blob/main/content/data-structures/LineContainer.h
-
+source:https://github.com/kth-competitive-programming/kactl/blob/main/content/data-structures/LineContainer.h
 ***************************/
 struct Line {
 	mutable ll k, m, p;
@@ -150,5 +141,3 @@ struct LineContainer : multiset<Line, less<>> {
 		return l.k * x + l.m;
 	}
 };
-
-/*********************************************/
