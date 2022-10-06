@@ -9,6 +9,7 @@ template <class T>pair<T,T> extended_euclid(T n,T m){//returns <u,v> such that n
         tt=tn_1-(q*tn);
         if(tr==0){
             return mp(sn,tn);
+            //return (sn+m)%m;
         }
         sn_1=sn;sn=ts;
         tn_1=tn;tn=tt;
