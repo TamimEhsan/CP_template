@@ -1,14 +1,3 @@
-#include<bits/stdc++.h>
-#define inf 1000000000
-#define eb emplace_back
-#define pb push_back
-#define fi first
-#define se second
-using namespace std;
-typedef pair<int,int> pii;
-typedef long long ll;
-int n;
-const int sz=200001;
 vector<int> tree[sz],ctree[sz];
 int sub[sz],vis[sz],cparent[sz];
 void dfs(int a,int p)
