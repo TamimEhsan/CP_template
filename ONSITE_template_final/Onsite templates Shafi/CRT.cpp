@@ -1,23 +1,8 @@
-#include<bits/stdc++.h>
-#define inf 1000000000
-#define eb emplace_back
-#define pb push_back
-#define fi first
-#define se second
 #define fastread ios::sync_with_stdio(false);cin.tie(NULL)
 #define rng_23 mt19937 rng(chrono::steady_clock::now().time_since_epoch().count())
-using namespace std;
-typedef long long ll;
-typedef pair<ll,ll> pii;
-typedef vector<ll> vi;
-typedef vector<pair<ll,ll>> vii;
-typedef set<ll> si;
-typedef multiset<ll> msi;
-typedef map<ll,ll> mii;
 const ll siz=1000000;
 ll moduli[siz],rem[siz];
-pii egcd(ll a,ll b)
-{
+pii egcd(ll a,ll b){
     ll r0=max(a,b),r1=min(a,b),s0=1,s1=0,t0=0,t1=1,q,tmp;
     while(r1){
         q=r0/r1;
@@ -31,9 +16,8 @@ pii egcd(ll a,ll b)
     return {s0,t0};
     //r0 is GCD
 }
-ll crt(ll n)
-{
-	ll n1, a1, m1, n2, a2, d, x; //x=n1*m1+a1=n2*m2+a2
+ll crt(ll n){
+    ll n1, a1, m1, n2, a2, d, x; //x=n1*m1+a1=n2*m2+a2
     n1=moduli[0],a1=rem[0];
     for(ll i=1;i<n;i++){
 		n2=moduli[i], a2=rem[i];
