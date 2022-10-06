@@ -1,6 +1,5 @@
 int failure[1000001];
-void build_failure(string &str)
-{
+void build_failure(string &str){
     int i,j,k;
     int cur;
     memset(failure,0,sizeof failure);
@@ -11,27 +10,19 @@ void build_failure(string &str)
         while(cur!=0){
            if(str[failure[cur]]==str[i-1]){
               failure[i]=failure[cur]+1;
-              break;
-           }
-           cur=failure[cur];
-        }
-    }
-}
-int kmp(string &text,string &pat)
-{
+              break;}
+           cur=failure[cur];}}}
+int kmp(string &text,string &pat){
     int i,j,k;
     int cur=0;
     int ocur=0;
     for(i=0;i<text.length();i++){
         if(cur==pat.length()){
-            ocur++;
-        }
+            ocur++;}
         while(cur and text[i]!=pat[cur])
                 cur=failure[cur];
         if(text[i]==pat[cur])
-            cur++;
-    }
+            cur++;}
     if(cur==pat.length())
         ocur++;
-    return ocur;
-}
+    return ocur;}
