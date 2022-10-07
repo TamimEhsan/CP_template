@@ -1,4 +1,4 @@
-mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
+mt19937 rng(chrono ::steady_clock ::now(). time_since_epoch(). count());
 const ll MAXN=1000001,hp=31+rng()%20, mod=1000004023;
 ll power[MAXN],ipower[MAXN];
 void ipower_build();
