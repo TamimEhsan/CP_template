@@ -91,3 +91,27 @@ void mobius(){
   for(int i=2;i<1000001;++i)
     for(int j=i*2;j<1000001;j+=i)
       mob[j]-=mob[i];}
+//return x such that a^x=b(mod)
+ll dlog(ll a,ll b,ll mod){
+    ll n,p,q;
+    n=(ll)sqrt((double)mod)+1ll;
+    ll an=modular_exp(a,n,mod);
+    map<ll,ll> map_;
+    ll cur=an;
+    for(p=1;p<=n;p++){
+        if(map_.find(cur)==map_.end()){
+            map_.insert(mp(cur,p));
+        }
+        cur=(cur*an)%mod;
+    }
+    cur=b;
+    ll mn=infl;
+    for(q=0;q<=n;q++){
+        if(map_.find(cur)!=map_.end()){
+            mn=min((n*map_[cur])-q,mn);
+        }
+        cur=(cur*a)%mod;
+    }
+    if(mn==infl)return -1;
+    else return mn;
+}
