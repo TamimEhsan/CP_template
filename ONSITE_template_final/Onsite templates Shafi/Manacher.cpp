@@ -5,8 +5,7 @@ string str_mod(string str){
   for(int i=0;i < str.length(); i++){
     mstr.push_back(str[i]);
     mstr.push_back('#');}
-  return mstr;
-}
+  return mstr;}
 void manacher(string str){
   int l,r;
   int lc=0,rc=0;
@@ -24,7 +23,4 @@ void manacher(string str){
       for(rt=max(r+1,rc+1),lt=2*mir-rt;lt>=0 && rt<mstr.size() && mstr[lt]==mstr[rt];rt++,lt=2*mir-rt){
         pal[mir]++;}
       rc=rt-1;
-      lc=lt+1;
-    }
-  }
-}
+      lc=lt+1;}}}
