@@ -13,19 +13,16 @@ namespace mcmf {
   void init(int nodes, int source, int sink) {
     n = nodes, s = source, t = sink;
     for (int i=0; i<n; i++) pi[i] = 0, adj[i].clear();
-    edges.clear();
-  }
+    edges.clear();}
   void addEdge(int u, int v, F cap,C cost) {
     edges.push_back({u, v, cost, cap, 0});
     edges.push_back({v, u, -cost, 0, 0});
     adj[u].push_back(edges.size()-2);
-    adj[v].push_back(edges.size()-1);
-  }
+    adj[v].push_back(edges.size()-1);}
   bool SPFA() {
     for (int i=0; i<n; i++) {
       dis[i] = infC; fl[i] = 0;
-      vis[i] = 0; prv[i] = -1;
-    }
+      vis[i] = 0; prv[i] = -1;}
     queue<int> q;
     q.push(s);
     dis[s] = 0; fl[s] = infF; vis[s] = 1;
@@ -40,12 +37,8 @@ namespace mcmf {
           dis[e.to] = dis[u] + e.cost;
           fl[e.to] = min(fl[u], e.cap - e.flow);
           prv[e.to] = eid^1;
-          if (!vis[e.to])   q.push(e.to);
-        }
-      }
-    }
-    return fl[t] > 0;
-  }
+          if (!vis[e.to])   q.push(e.to);}}}
+    return fl[t] > 0;}
   PCF solveSPFA() {
     C cost = 0; F flow = 0;
     while (SPFA()) {
@@ -53,20 +46,15 @@ namespace mcmf {
       cost += pathcost*fl[t]; flow += fl[t];
       for (int u=t, e=prv[u]; e!=-1; u=edges[e].to, e=prv[u]) {
         edges[e].flow -= fl[t];
-        edges[e^1].flow += fl[t];
-      }
-    }
-    return {cost, flow};
-  }
+        edges[e^1].flow += fl[t];}}
+    return {cost, flow};}
   void normalize() {
     SPFA();
-    for (int i=0; i<n; i++) pi[i] = dis[i];
-  }
+    for (int i=0; i<n; i++) pi[i] = dis[i];}
   bool Dijkstra() {
     for (int i=0; i<n; i++) {
       dis[i] = infC; fl[i] = 0;
-      vis[i] = 0; prv[i] = -1;
-    }
+      vis[i] = 0; prv[i] = -1;}
     priority_queue<pair<C, int>> pq;
     pq.emplace(0, s);
     dis[s] = 0; fl[s] = infF;
@@ -82,12 +70,8 @@ namespace mcmf {
           dis[e.to] = nw;
           fl[e.to] = min(fl[u], e.cap - e.flow);
           prv[e.to] = eid^1;
-          pq.emplace(-dis[e.to], e.to);
-        }
-      }
-    }
-    return fl[t] > 0;
-  }
+          pq.emplace(-dis[e.to], e.to);}}}
+    return fl[t] > 0;}
   PCF solveDijkstra() {
     normalize();
     C cost = 0; F flow = 0;
@@ -99,10 +83,5 @@ namespace mcmf {
 
       for (int u=t, e=prv[u]; e!=-1; u=edges[e].to, e=prv[u]) {
         edges[e].flow -= fl[t];
-        edges[e^1].flow += fl[t];
-      }
-    }
-    return {cost, flow};
-  }
-}
-
+        edges[e^1].flow += fl[t];}}
+    return {cost, flow};}}
