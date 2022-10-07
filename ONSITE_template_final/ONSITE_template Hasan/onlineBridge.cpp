@@ -15,7 +15,6 @@ void init(int n) {
     dsu_cc_size[i] = 1;
     par[i] = -1;}
   bridges = 0;}
-
 int find_2ecc(int v) {
   if (v == -1)
     return -1;
@@ -44,8 +43,7 @@ void merge_path (int a, int b) {
       path_a.push_back(a);
       if (last_visit[a] == lca_iteration){
         lca = a;
-        break;
-        }
+        break;}
       last_visit[a] = lca_iteration;
       a = par[a];}
     if (b != -1) {
@@ -77,8 +75,7 @@ void add_edge(int a, int b) {
     ++bridges;
     if (dsu_cc_size[ca] > dsu_cc_size[cb]) {
       swap(a, b);
-      swap(ca, cb);
-    }
+      swap(ca, cb);}
     make_root(a);
     par[a] = dsu_cc[a] = b;
     dsu_cc_size[cb] += dsu_cc_size[a];
