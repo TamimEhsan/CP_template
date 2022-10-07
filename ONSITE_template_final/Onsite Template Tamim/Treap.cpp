@@ -6,10 +6,8 @@ using namespace std;
 #define mp make_pair
 #define F first
 #define S second
-
 typedef long long LL;
 mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
-
 typedef struct item * pitem;
 struct item {
     int prior, value, cnt;
@@ -22,10 +20,8 @@ struct item {
         sum = value;
         l = r = nullptr;
     }
-
     pitem l, r;
 };
-
 namespace Treap {
     int cnt (pitem it) {
         return it != nullptr? it->cnt : 0;
@@ -135,8 +131,6 @@ namespace Treap {
 //        cout << ")";
     }
 }
-
-
 int main(){
     pitem root = nullptr;
     int n,q;
