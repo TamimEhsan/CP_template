@@ -100,7 +100,6 @@ const int M = 1e9+7, B = sqrt(M)+1;
       ll mid = round(round(bl[i].real()) + round(ar[i].real()));
       ans[i] = ((left%M)*B*B + (mid%M)*B + right)%M;}
     return ans;}}
-///Solves https://old.yosupo.jp/problem/convolution_mod_1000000007
   vector<LL> a(n), b(m);
   vector<LL> ans = FFT::anyMod(a, b);
   ans.resize(n+m-1);
