@@ -4,20 +4,15 @@ ll cross(pll a,pll b){
 }
 int quarter(pll a){
   if(a.first>=0){
-    if(a.second>=0)
-      return 0;
-    else
-      return 3;}
+    if(a.second>=0)return 0;
+    elsereturn 3;}
   else{
-    if(a.second>=0)
-      return 1;
+    if(a.second>=0)return 1;
     return 2;}}
 bool polar_order(pair<pll,int> & a,pair<pll,int>& b){
   if(quarter(a.first)==quarter(b.first)){
-    return cross(a.first,b.first)>0;
-  }
-  else
-    return quarter(a.first)<quarter(b.first);}
+    return cross(a.first,b.first)>0;}
+  else return quarter(a.first)<quarter(b.first);}
 //number of point on a line segment
 template <class T>
 T npoint(pair<T,T> l,pair<T,T> r){
@@ -57,12 +52,10 @@ bool onBoundary(vector<pair<T,T> >&polygon,pair<T,T> pn){
        &&((pn.first>=polygon[i].first&& pn.first<=polygon[i+1].first)|| (pn.first<=polygon[i].first&& pn.first>=polygon[i+1].first))
        &&((pn.second>=polygon[i].second&& pn.second<=polygon[i+1].second)|| (pn.second<=polygon[i].second&& pn.second>=polygon[i+1].second)))
     {
-      return true;
-    }}
+      return true;}}
   return false;}
 template <class T>
-inline
-T cross(pair<T,T> p0,pair<T,T> p1,pair<T,T> p2){
+inline T cross(pair<T,T> p0,pair<T,T> p1,pair<T,T> p2){
   return (p1.first-p0.first)* (p2.second-p0.second)- (p1.second-p0.second)* (p2.first-p0.first);}
 //winding number from a point,tested on loj timus and cses
 template<class T>
