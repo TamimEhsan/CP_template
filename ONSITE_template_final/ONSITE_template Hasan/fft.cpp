@@ -1,15 +1,10 @@
-/**
-Iterative Implementation of FFT and FFTanymod. Complexity: O(N log N)
-
+/*Iterative Implementation of FFT and FFTanymod. Complexity: O(N log N)
 1. Whenever possible remove leading zeros.
 2. Custom Complex class may slightly improve performance.
 3. Use pairfft to do two ffts of real vectors at once, slightly less accurate
 than doing two ffts, but faster by about 30%.
 4. FFT accuracy depends on answer. x <= 5e14 (double), x <= 1e18(long double)
-   where x = max(ans[i]) for FFT, and x = N*mod for anymod
-
-   Author: anachor
-**/
+   where x = max(ans[i]) for FFT, and x = N*mod for anymod*/
 struct CD {
   double x, y;
   CD(double x=0, double y=0) :x(x), y(y) {}
