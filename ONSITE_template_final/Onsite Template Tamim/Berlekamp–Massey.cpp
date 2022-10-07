@@ -16,10 +16,8 @@ vector<ll> berlekampMassey(vector<ll> s) {
     L = i + 1 - L;
     B = T;
     b = d;
-    m = 0;
-  }
+    m = 0;}
   C.resize(L + 1);
   C.erase(C.begin());
   for (ll& x : C) x = (mod - x) % mod;
-  return C;
-}
+  return C;}
