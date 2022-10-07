@@ -33,8 +33,7 @@ void z_function(const string& str, vector<int>& z){
   for(i=1;i<sz;i++){
     z[i]=0;
     if(i<=r){
-      z[i]=min(r-i+1, z[i-l]);
-    }
+      z[i]=min(r-i+1, z[i-l]);}
     while(i+z[i]<sz&&str[z[i]] == str[i+z[i]])z[i]++;
     if(i+z[i]-1>r){
       l=i;
