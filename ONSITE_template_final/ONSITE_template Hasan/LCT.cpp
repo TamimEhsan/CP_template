@@ -1,104 +1,79 @@
 /** super cool dynamic lct****/
-
 #define LL_MAX 0x7fffffffffffffff
 struct Line{
   long long m,c;//mx+c
   Line(){
-    m=c=LL_MAX;
-  }
+    m=c=LL_MAX;}
   Line(ll m,ll c):m(m),c(c){}
   long long operator()(long long x){
-    return m*x+c;
-  }
+    return m*x+c;}
   bool parallel(Line l){
-    return m==l.m;
-  }
-  pair<long double,long double> intersect(Line l)//assuming not parallel
-  {
+    return m==l.m;}
+  //assuming not parallel
+  pair<long double,long double> intersect(Line l){
     long double x,y;
     x=(long double)(l.c-c)/(m-l.m);
     y=(long double)m*x+c;
-    return {x,y};
-  }
-};
+    return {x,y};}};
 struct LctElement{
   Line l;
   LctElement *lft,*rht;
   LctElement(){
-    lft=rht=NULL;
-  }
-};
+    lft=rht=NULL;}};
 class DynamicLCT{
   LctElement* root;
   bool minTree;
   void updateMin(LctElement* v,int vl,int vr,Line nl){
     if(v->l.m==LL_MAX){
       v->l=nl;
-      return;
-    }
+      return;}
     if(vl==vr){
       if(nl(vl)<v->l(vl)){
-        v->l=nl;
-      }
-      return;
-    }
+        v->l=nl;}
+      return;}
     if(v->l.m>nl.m){
-      swap(v->l,nl);
-    }
+      swap(v->l,nl);}
     int mid=(vl+vr)/2;
     if(nl(mid)>v->l(mid)){
       if(v->lft==NULL)
         v->lft=new LctElement();
-      updateMin(v->lft,vl,mid,nl);
-    }
+      updateMin(v->lft,vl,mid,nl);}
     else{
       swap(v->l,nl);
       if(v->rht==NULL)
         v->rht=new LctElement();
-      updateMin(v->rht,mid+1,vr,nl);
-    }
-  }
+      updateMin(v->rht,mid+1,vr,nl);}}
   void updateMax(LctElement* v,int vl,int vr,Line nl){
     if(v->l.m==LL_MAX){
       v->l=nl;
-      return;
-    }
+      return;}
     if(vl==vr){
       if(nl(vl)>v->l(vl)){
-        v->l=nl;
-      }
-      return;
-    }
+        v->l=nl;}
+      return;}
     if(v->l.m==nl.m){
       if(nl(vl)>v->l(vl)){
-        v->l=nl;
-      }
-      return;
-    }
+        v->l=nl;}
+      return;}
     if(v->l.m>nl.m){
-      swap(v->l,nl);
-    }
+      swap(v->l,nl);}
     int mid=(vl+vr)/2;
     if(nl(mid)>v->l(mid)){
       swap(v->l,nl);
       if(v->lft==NULL)
         v->lft=new LctElement();
-      updateMax(v->lft,vl,mid,nl);
-    }
+      updateMax(v->lft,vl,mid,nl);}
     else{
       if(v->rht==NULL)
         v->rht=new LctElement();
-      updateMax(v->rht,mid+1,vr,nl);
-    }
-  }
+      updateMax(v->rht, mid+1, vr,nl);}}
   ll queryMin(LctElement* v,int vl,int vr,ll x){
     if(v==NULL)
       return LL_MAX;
     if(vl==vr){
       if(v->l.m==LL_MAX)
         return LL_MAX;
-      return v->l(x);
-    }
+      return v->l(x);}
     ll res=LL_MAX;
     if(v->l.m!=LL_MAX)
       res=v->l(x);
@@ -106,16 +81,14 @@ class DynamicLCT{
     if(x<=mid)
       return min(res, queryMin(v->lft,vl,mid,x));
     else
-      return min(res, queryMin(v->rht,mid+1,vr,x));
-  }
+      return min(res, queryMin(v->rht,mid+1,vr,x));}
   ll queryMax(LctElement* v,int vl,int vr,ll x){
     if(v==NULL)
       return -LL_MAX;
     if(vl==vr){
       if(v->l.m==LL_MAX)
         return -LL_MAX;
-      return v->l(x);
-    }
+      return v->l(x);}
     ll res=-LL_MAX;
     if(v->l.m!=LL_MAX)
       res=v->l(x);
@@ -123,34 +96,27 @@ class DynamicLCT{
     if(x<=mid)
       return max(res, queryMax(v->lft,vl,mid,x));
     else
-      return max(res, queryMax(v->rht,mid+1,vr,x));
-  }
+      return max(res, queryMax(v->rht,mid+1,vr,x));}
   void freeMemory(LctElement* node){
     if(node==NULL)
       return;
     freeMemory(node->lft);
     freeMemory(node->rht);
-    delete node;
-  }
+    delete node;}
 public:
   DynamicLCT(bool MinTree=true){
     root=new LctElement();
-    minTree=MinTree;
-  }
+    minTree=MinTree;}
   void update(int vl,int vr,Line nl){
     if(minTree)
       updateMin(root,vl,vr,nl);
     else
-      updateMax(root,vl,vr,nl);
-  }
+      updateMax(root,vl,vr,nl);}
   ll query(int vl,int vr,ll x){
     if(minTree)
       return queryMin(root,vl,vr,x);
     else
-      return queryMax(root,vl,vr,x);
-  }
+      return queryMax(root,vl,vr,x);}
   ~DynamicLCT(){
-    freeMemory(root);
-  }
-};
+    freeMemory(root);}};
 /*********************************/
