@@ -1,14 +1,6 @@
 mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 const ll MAXN=1000001,hp=31+rng()%20, mod=1000004023;
 ll power[MAXN],ipower[MAXN];
-void power_build();
-ll bigmod(ll a,ll b){
-  ll ans=1;
-  while(b>0){
-    if(b&1)
-      ans=(ans*a)%mod;
-    b=b>>1;a=(a*a)%mod;}
-  return ans;}
 void ipower_build();
 class Hush{
 public:
