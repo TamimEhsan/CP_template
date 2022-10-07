@@ -30,7 +30,7 @@ namespace Rho {
   }
   ///Returns a proper divisor if n is composite, n otherwise
   ///Possible Optimization: use binary gcd for ~10% speedup
-  mt19937_64 rng(chrono::system_clock::now().time_since_epoch().count());
+  mt19937_64 rng(chrono ::system_clock ::now(). time_since_epoch() .count());
   ULL FindFactor(ULL n) {
     if (n == 1 || isprime(n))  return n;
     ULL c = 1, x = 0, y = 0, t = 0, prod = 2, x0 = 1, q;
@@ -43,7 +43,6 @@ namespace Rho {
     }
     return gcd(prod, n);
   }
-
   ///Returns all prime factors
   vector<ULL> factorize(ULL x) {
     if (x == 1)   return {};
@@ -51,11 +50,7 @@ namespace Rho {
     if (a == x) return {a};
     vector<ULL> L = factorize(a), R = factorize(b);
     L.insert(L.end(), R.begin(), R.end());
-    return L;
-  }
-}
+    return L;}}
 int main() {
   long long x;
-  cin>>x;
-  vector<ULL> ans = Rho::factorize(x);
-}
+  vector<ULL> ans = Rho::factorize(x);}
