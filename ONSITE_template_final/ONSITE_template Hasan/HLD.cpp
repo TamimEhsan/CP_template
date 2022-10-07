@@ -9,34 +9,25 @@ namespace HLD{
     T (*propagate)(T to,T from,int);
     int n;
 
-    SegTree(int sz,T(*combine)(T,T), T(*propagate)(T,T,int),T* data=NULL)
-    {
+    SegTree(int sz,T(*combine)(T,T), T(*propagate)(T,T,int),T* data=NULL){
       this->combine=combine;
       this->propagate=propagate;
       n=sz;
       sgt=new T[4*sz];
       if(data!=NULL)
-        build(1,0,n-1,data);
-    }
-    void build(int v,int vl, int vr,T* data)
-    {
-      if(vl==vr)
-      {
+        build(1,0,n-1,data);}
+    void build(int v,int vl, int vr,T* data){
+      if(vl==vr){
         sgt[v]=data[vl];
-        return;
-      }
+        return;}
       int mid=(vl+vr)/2;
       build(2*v,vl,mid,data);
       build(2*v+1,mid+1,vr,data);
-      sgt[v]=combine(sgt[2*v], sgt[2*v+1]);
-    }
-    void update(int v,int vl,int vr,int l,int r,T unp)
-    {
-      if(vl==l&&vr==r)
-      {
+      sgt[v]=combine(sgt[2*v], sgt[2*v+1]);}
+    void update(int v,int vl,int vr,int l,int r,T unp){
+      if(vl==l&&vr==r){
         sgt[v]=propagate( sgt[v],unp,r-l+1);
-        return;
-      }
+        return;}
       int mid=(vl+vr)/2;
       sgt[2*v]=propagate( sgt[2*v],sgt[v],mid-vl+1);
       sgt[2*v+1]=propagate( sgt[2*v+1],sgt[v],vr-mid);
@@ -46,17 +37,13 @@ namespace HLD{
         update(2*v+1,mid+1,vr, l,r,unp);
       else{
         update(2*v,vl,mid,l, mid,unp);
-        update(2*v+1,mid+1,vr, mid+1,r,unp);
-      }
-      sgt[v]=combine(sgt[2*v], sgt[2*v+1]);
-    }
+        update(2*v+1,mid+1,vr, mid+1,r,unp);}
+      sgt[v]=combine(sgt[2*v], sgt[2*v+1]);}
     void update(int l,int r,T unp){
-      update(1,0,n-1,l,r,unp);
-    }
+      update(1,0,n-1,l,r,unp);}
     T query(int v,int vl,int vr,int l,int r){
       if(vl==l&&vr==r){
-        return sgt[v];
-      }
+        return sgt[v];}
       int mid=(vl+vr)/2;
       sgt[2*v]=propagate( sgt[2*v],sgt[v],mid-vl+1);
       sgt[2*v+1]=propagate( sgt[2*v+1],sgt[v],vr-mid);
@@ -66,33 +53,24 @@ namespace HLD{
       else if(l>mid)
         return query(2*v+1, mid+1,vr,l,r);
       else
-        return combine( query(2*v,vl,mid,l,mid), query(2*v+1,mid+1,vr,mid+1,r));
-    }
+        return combine( query(2*v,vl,mid,l,mid), query(2*v+1,mid+1,vr,mid+1,r));}
     T query(int l,int r){
-      return query(1,0,n-1,l,r);
-    }
+      return query(1,0,n-1,l,r);}
     ~SegTree(){
       if(n!=0&&sgt!=NULL)
-        delete[] sgt;
-    }
-  };
+        delete[] sgt;}};
   struct Node{
     int mn=INT_MAX,unp=INT_MAX;
     Node(){}
-    Node(int mn,int unp): mn(mn),unp(unp){}
-  };
-  inline Node combine(Node a,Node b)
-  {
-    return {min(a.mn,b.mn),INT_MAX};
-  }
-  inline Node propagate(Node to,Node from,int len)
-  {
+    Node(int mn,int unp): mn(mn),unp(unp){}};
+  inline Node combine(Node a,Node b){
+    return {min(a.mn,b.mn),INT_MAX};}
+  inline Node propagate(Node to,Node from,int len){
     if(from.unp==INT_MAX)
       return to;
     to.mn=min(to.mn,from.unp);
     to.unp=min(to.unp,from.unp);
-    return to;
-  }
+    return to;}
   #define MAX_SIZE 100001
   vector<vector<int> >G;
   vector<int> parent,depth, heavy,head,pos;
@@ -111,12 +89,8 @@ namespace HLD{
         sz+=c_size;
         if(c_size>max_c_size){
           max_c_size=c_size;
-          heavy[node]=c;
-        }
-      }
-    }
-    return sz;
-  }
+          heavy[node]=c; }}}
+    return sz;}
   void decompose(int node,int h){
     pos[node]=cur_pos++;
     head[node]=h;
@@ -124,10 +98,8 @@ namespace HLD{
       decompose(heavy[node],h);
     for(int c:G[node]){
       if(c!=parent[node]&& c!=heavy[node])
-        decompose(c,c);
-    }
-    return;
-  }
+        decompose(c,c);}
+    return;}
   //for query on path the node_val of a node is the cost of the edge to parent
   //exclude=true for query on path,it excludes the value stored in lca(a,b)
   int query(int a,int b,int n,bool exclude=false){//n number of node in the tree
@@ -135,12 +107,10 @@ namespace HLD{
     while(head[a]!=head[b]){
       if(depth[head[a]]> depth[head[b]])swap(a,b);
       res=combine(res, sgt.query(pos[head[b]],pos[b]));
-      b=parent[head[b]];
-    }
+      b=parent[head[b]];}
     if(depth[a]>depth[b])swap(a,b);
     res=combine(res,exclude? sgt.query(pos[a]+1,pos[b]):sgt.query(pos[a],pos[b]));
-    return res.mn;
-  }
+    return res.mn;}
 //  void update(int node,int val)
 //  {
 //    sgt.update(pos[node],val);
@@ -156,26 +126,19 @@ namespace HLD{
     if(depth[a]>depth[b])swap(a,b);
     //res=combine(res,exclude? sgt.query(pos[a]+1, pos[b]): sgt.query(pos[a],pos[b]));
     sgt.update(pos[a],pos[b],{0,val});
-    //return res.mn;
-  }
+    //return res.mn;}
   void init(int n){
     parent.resize(n);
     depth.resize(n);
     heavy.assign(n,-1);
     head.resize(n);
     pos.resize(n);
-
     parent[0]=0;//might change later
     dfs(0);
     cur_pos=0;
     decompose(0,0);
-
     node_val_order.resize(n);
-    for(int i=0;i<n;++i)
-    {
-      node_val_order[pos[i]]= node_val[i];
-    }
+    for(int i=0;i<n;++i){
+      node_val_order[pos[i]]= node_val[i];}
     sgt.n=n;
-    //sgt.build(node_val_order,1,0,n-1);
-  }
-}
+    //sgt.build(node_val_order, 1,0,n-1); }}
