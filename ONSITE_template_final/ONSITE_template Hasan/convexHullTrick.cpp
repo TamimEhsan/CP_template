@@ -16,8 +16,7 @@ class MonotoneCHT{
         if(Q.back().c<nl.c)
           Q.pop_back();
         else return; }}
-    while(Q.size()>1&&Q.back().intersect(nl)<Q[Q.size()-2].intersect(nl))
-      Q.pop_back();
+    while(Q.size()>1 && Q.back().intersect(nl) < Q[Q.size()-2].intersect(nl)) Q.pop_back();
     Q.push_back(nl);}
   void insertFront(Line nl){
     //handle parallel line insertion,there cannot be 
@@ -31,7 +30,7 @@ class MonotoneCHT{
         if(Q[0].c<nl.c)
           Q.pop_front();
         else return;}}
-    while(Q.size()>1&& Q[0].intersect(nl)> Q[1].intersect(nl))
+    while(Q.size()>1 && Q[0].intersect(nl)> Q[1].intersect(nl))
       Q.pop_front();
     Q.push_front(nl);}
   pii bSearch(ll x){
