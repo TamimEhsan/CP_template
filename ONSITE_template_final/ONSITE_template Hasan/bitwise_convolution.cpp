@@ -16,11 +16,7 @@ void orTransform(vector<T>& a,bool invert=false){
           T tmp=a[j];
           a[j]+=a[j+l2];
           a[j+l2]=tmp;
-        }
-      }
-    }
-  }
-}
+        }}}}}
 template<class T>
 vector<T> multiply(vector<T> a,vector<T> b){
   int n=a.size();
@@ -28,13 +24,9 @@ vector<T> multiply(vector<T> a,vector<T> b){
   orTransform(a);
   orTransform(b);
   for(int i=0;i<n;++i){
-    a[i]*=b[i];
-
-  }
+    a[i]*=b[i];}
   orTransform(a,true);
-  return a;
-}
-
+  return a;}
 ///with mod
 const ll mod=998244353;
 template<class T>
@@ -48,18 +40,13 @@ void orTransform(vector<T>& a,bool invert=false){
         if(invert){
           T tmp=a[j+l2];
           a[j+l2]=(a[j]-a[j+l2]+mod)%mod;
-          a[j]=tmp;
-        }
+          a[j]=tmp;}
         else{
           T tmp=a[j];
           a[j]+=a[j+l2];
           a[j]%=mod;
           a[j+l2]=tmp;
-        }
-      }
-    }
-  }
-}
+        }}}}}
 template<class T>
 vector<T> multiply(vector<T> a,vector<T> b){
   int n=a.size();
@@ -68,17 +55,12 @@ vector<T> multiply(vector<T> a,vector<T> b){
   orTransform(b);
   for(int i=0;i<n;++i){
     a[i]*=b[i];
-    a[i]%=mod;
-
-  }
+    a[i]%=mod;}
   orTransform(a,true);
   for(auto &e:a){
     e%=mod;
-    e=(e+mod)%mod;
-  }
-  return a;
-}
-
+    e=(e+mod)%mod;}
+  return a;}
 ///and convolution using or convolution
 template<class T>
 vector<T> multiplyAnd(vector<T> a,vector<T> b){
@@ -88,8 +70,7 @@ vector<T> multiplyAnd(vector<T> a,vector<T> b){
   reverse(b.begin(),b.end());
   vector<T> out=multiply(a,b);
   reverse(out.begin(),out.end());
-  return out;
-}
+  return out;}
 //zeta transform or sos dp
 void zeta(vll& d,int m){
   int n=1<<m;
@@ -97,11 +78,7 @@ void zeta(vll& d,int m){
     for(int i=0;i<n;i+=len){
       int l2=len>>1;
       for(int j=i;j<i+l2;++j){
-        d[j+l2]+=d[j];
-      }
-    }
-  }
-}
+        d[j+l2]+= d[j];}}}}
 //zeta_inverse or mobius transform
 void zinv(vll &d,int m){
   int n=1<<m;
@@ -109,12 +86,7 @@ void zinv(vll &d,int m){
     for(int i=0;i<n;i+=len){
       int l2=len>>1;
       for(int j=i;j<i+l2;++j){
-        d[j+l2]-=d[j];
-      }
-    }
-  }
-}
-
+        d[j+l2]-=d[j];}}}}
 //subset sum convolution
 //not fully tested,got some error if used with mod
 #define MAX_SIZE 1<<20
@@ -132,23 +104,16 @@ void subsetConvolution(int m){
   memset(h,0,sizeof(h));
   for(int i=0;i<n;++i){
     fhat[__builtin_popcount(i)][i]=f[i];
-    ghat[__builtin_popcount(i)][i]=g[i];
-  }
+    ghat[__builtin_popcount(i)][i]=g[i];}
   for (int i=0; i<=m; i++) {
     zeta(fhat[i],m);
     zeta(ghat[i],m);
     for (int j=0; j<=i; j++){
       for (int mask = 0; mask < n; mask++){
-        h[i][mask] += fhat[j][mask]*ghat[i-j][mask];
-      }
-    }
-    zinv(h[i],m);
-  }
+        h[i][mask] += fhat[j][mask]*ghat[i-j][mask];}}
+    zinv(h[i],m);}
   for(int  i=0;i<n;++i)
-    res[i]=h[__builtin_popcount(i)][i];
-}
-
-
+    res[i]=h[__builtin_popcount(i)][i];}
 vector<ll> FWHT(vector<ll> P, bool inverse) {
   int n=P.size();
   assert((n&(n-1))==0);
@@ -158,25 +123,16 @@ vector<ll> FWHT(vector<ll> P, bool inverse) {
         ll u = P[i + j];
         ll v = P[i + len + j];
         P[i + j] = u + v;
-        P[i + len + j] = u - v;
-      }
-    }
-  }
-
+        P[i + len + j] = u - v;}}}
   if (inverse) {
     for (int i = 0; i < n; i++)
-      P[i] = P[i] / n;
-  }
-
-  return P;
-}
+      P[i] = P[i] / n;}
+  return P;}
 vector<ll> xorConvo(vector<ll> a,vector<ll> b){
   int n=a.size();
   assert(!(n&(n-1)));
   a=FWHT(a);
   b=FWHT(b);
   for(int i=0;i<n;++i){
-    a[i]*=b[i];
-  }
-  return FWHT(a,true);
-}
+    a[i]*=b[i];}
+  return FWHT(a,true);}
