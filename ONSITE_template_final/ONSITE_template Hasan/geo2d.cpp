@@ -72,8 +72,7 @@ struct polarComp {
   bool operator()(PT p, PT q) {
     return make_tuple(half(p-O), 0) <
            make_tuple(half(q-O), cross(p-O, q-O));
-  }
-};
+  }};
 struct Segment {
   PT a, b;
   Segment() {}
@@ -115,8 +114,7 @@ bool lineLineIntersect(PT p,PT v,PT q,PT w,PT&o) {
   static_assert(is_same<Tf, Ti>::value);
   if(dcmp(cross(v, w)) == 0) return false;
   PT u = p - q; o = p + v*(cross(w,u)/cross(v,w));
-  return true;
-}
+  return true;}
 bool lineLineIntersect(Line p, Line q, PT& o) {
   return lineLineIntersect(p.a, p.b - p.a, q.a,
                                     q.b - q.a, o);
@@ -137,8 +135,7 @@ Tf distanceSegmentSegment(Segment p, Segment q) {
   ans = min(ans, distancePointSegment(p.b, q));
   ans = min(ans, distancePointSegment(q.a, p));
   ans = min(ans, distancePointSegment(q.b, p));
-  return ans;
-}
+  return ans;}
 PT projectPointLine(PT p, Line l) {
   static_assert(is_same<Tf, Ti>::value);
   PT v = l.b - l.a;
@@ -260,8 +257,7 @@ Polygon minkowskiSum(Polygon A, Polygon B){
   merge(A.begin(), A.end()-1, B.begin(),B.end()-1,
      C.begin()+1, polarComp(PT(0, 0), PT(0, -1)));
   for(int i=1; i<C.size(); i++) C[i]=C[i]+C[i-1];
-  C.pop_back(); return C;
-}
+  C.pop_back(); return C;}
 //{min area, min perimeter) rectangle containing p
 pair<Tf,Tf>rotatingCalipersBBox(const Polygon &p){
   using Linear::distancePointLine;
@@ -281,8 +277,7 @@ pair<Tf,Tf>rotatingCalipersBBox(const Polygon &p){
                           Line(p[i], p[(i+1)%n]));
     area = min(area, w * h);
     perimeter = min(perimeter, 2 * w + 2 * h);
-  } return make_pair(area, perimeter);
-}
+  } return make_pair(area, perimeter);}
 // returns the left half of u on left on ray ab
 Polygon cutPolygon(Polygon u, PT a, PT b) {
   using Linear::lineLineIntersect;
@@ -295,8 +290,7 @@ Polygon cutPolygon(Polygon u, PT a, PT b) {
       PT t; lineLineIntersect(a, b-a, c, d-c, t);
     if(onSegment(t,Segment(c,d)))ret.push_back(t);
     }
-  } return ret;
-}
+  } return ret;}
 bool pointInTriangle(PT a, PT b, PT c, PT p) {
   return dcmp(cross(b - a, p - a)) >= 0
     && dcmp(cross(c - b, p - b)) >= 0
@@ -408,8 +402,7 @@ PT pointPolyTangent(const Polygon &pt, PT Q,
       if(orient(Q,pt[mid],pt[lo])==dir) lo=mid+1;
       else if(better(pt[lo],pt[hi],Q,dir)==pt[lo])
         hi = mid - 1;   else  lo = mid + 1;
-    }
-  }
+    }}
   PT ret = pt[lo];
   for(int i = lo + 1; i <= hi; i++)
     ret = better(ret, pt[i], Q, dir);
@@ -620,8 +613,7 @@ struct Event {
   Tf x; int tp, id;
   bool operator < (const Event &p) const {
     if(dcmp(x-p.x)) return x<p.x; return tp>p.tp;
-  }
-};
+  }};
 pair<int, int> anyInters(const vector<Segment> &v){
   using Linear::segmentsIntersect;
   static_assert(is_same<Tf, Ti>::value);
@@ -698,7 +690,6 @@ Polygon halfPlaneIntersection(vector<DirLine> li) {
   vector<PT> p(n);
   vector<DirLine> q(n);
   q[0] = li[0];
-
   for(int i = 1; i < n; i++) {
     while(first < last && !li[i].onLeft(p[last-1]))
         last--;
@@ -713,7 +704,6 @@ Polygon halfPlaneIntersection(vector<DirLine> li) {
       lineLineIntersect(q[last-1].p, q[last-1].v,
                q[last].p, q[last].v, p[last - 1]);
   }
-
   while(first<last && !q[first].onLeft(p[last-1]))
     last--;
   if(last - first <= 1) return {};
@@ -721,7 +711,6 @@ Polygon halfPlaneIntersection(vector<DirLine> li) {
                 q[first].p, q[first].v, p[last]);
 return Polygon(p.begin()+first, p.begin()+last+1);
 }
-
 // O(n^2 lg n) VoronoiDiagram bounded by INF square
 // regions[i] = region with closest =  site[i].
 const Tf INF = 1e10;
