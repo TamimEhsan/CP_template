@@ -101,14 +101,6 @@ const int M = 1e9+7, B = sqrt(M)+1;
       ans[i] = ((left%M)*B*B + (mid%M)*B + right)%M;}
     return ans;}}
 ///Solves https://old.yosupo.jp/problem/convolution_mod_1000000007
-int main() {
-  ios::sync_with_stdio(0);
-  cin.tie(0);
-  int n, m;
-  cin>>n>>m;
-   vector<LL> a(n), b(m);
-  for (int i=0; i<n; i++) cin>>a[i];
-  for (int i=0; i<m; i++) cin>>b[i];
+  vector<LL> a(n), b(m);
   vector<LL> ans = FFT::anyMod(a, b);
   ans.resize(n+m-1);
-  for (LL x: ans) cout<<x<<" ";}
