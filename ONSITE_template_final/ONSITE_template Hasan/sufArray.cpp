@@ -7,8 +7,7 @@ namespace SA{
   int wa[N],wb[N],wws[N],wv[N];
   int lg[N], st[N][log_N];
   int cmp(int *r,int a,int b,int l){
-    return (r[a]==r[b]) && (r[a+l]==r[b+l]);
-  }
+    return (r[a]==r[b]) && (r[a+l]==r[b+l]);}
   void DA(int *r,int *sa,int n,int m){
     int i,j,p,*x=wa,*y=wb,*t;
     for(i=0;i<m;i++) wws[i]=0;
@@ -32,14 +31,10 @@ namespace SA{
     for(int j = 1; j < log_N; j++) {
       for(int i = 0; i <=n; i++) {
         if (i+(1<<j)-1 <= n) st[i][j] = min(st[i][j-1],st[i+(1<<(j-1))][j-1]);
-        else break;
-      }
-    }
+        else break;}}
     lg[0] = lg[1] = 0;
     for(int i = 2; i <= n; i++) {
-      lg[i] = lg[i/2] + 1;
-    }
-  }
+      lg[i] = lg[i/2] + 1;}}
   void calheight(int *r,int *sa,int n){
     int i,j,k=0;
     for(i=1;i<=n;i++) rnk[sa[i]]=i;
@@ -52,8 +47,7 @@ namespace SA{
     for (int i = 0; i < n; i++) ra[i] = s[i];
     DA(ra,sa,n+1,ALPHA);
     calheight(ra,sa,n);
-    init();
-  }
+    init();}
   //0 indexed
   int query(int l, int r) {
     int pl=rnk[l];
@@ -62,14 +56,4 @@ namespace SA{
       swap(pl,pr);
     pr--;
     int x=lg[pr-pl+1];
-    return min(st[pl][x],st[pr-(1<<x)+1][x]);
-  }
-  long long numberOfDistinctSubString(int len)//length of string s,not s+'#'
-  {
-    long long ans=1ll*len*(len+1)/2;
-    for(int i=1;i<=len;++i){
-      ans-=SA::hg[i];
-    }
-    return ans;
-  }
-}
+    return min(st[pl][x],st[pr-(1<<x)+1][x]);}
