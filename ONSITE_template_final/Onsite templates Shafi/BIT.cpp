@@ -23,17 +23,11 @@ void add(int i,int j,ll val){
    int k;
    for(;i<=MX_SIZE;i+=LSB(i)){
       for(k=j;k<=MX_SIZE;k+=LSB(k)){
-        A[i][k]+=val;
-      }
-   }
-}
+        A[i][k]+=val;}}}
 ll sum(int i,int j){
    int k;
    ll s=0;
    for(;i>0;i-=LSB(i)){
       for(k=j;k>0;k-=LSB(k)){
-        s+=A[i][k];
-      }
-   }
-   return s;
-}
+        s+=A[i][k];}}
+   return s;}
