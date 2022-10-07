@@ -136,3 +136,8 @@ vector<ll> xorConvo(vector<ll> a,vector<ll> b){
   for(int i=0;i<n;++i){
     a[i]*=b[i];}
   return FWHT(a,true);}
+//explore all subset
+int s = m;
+while (s > 0) {
+ s = (s-1) & m;
+}
