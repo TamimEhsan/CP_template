@@ -38,5 +38,5 @@ void bell_ford(int src,int n){
      dist[i]=inf;
    dist[src]=0;
    for(int i=1;i<n;i++){
-     for(int j=0;j<graph.size();j++)
-       dist[graph[j].b]=min(dist[graph[j].b],dist[graph[j].a]+graph[j].cost);}}
+     for(int j=0;j< graph.size();j++)
+       dist[graph[j].b]= min(dist[graph[j].b], dist[graph[j].a]+ graph[j].cost);}}
