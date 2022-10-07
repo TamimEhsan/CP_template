@@ -100,18 +100,31 @@ ll dlog(ll a,ll b,ll mod){
     ll cur=an;
     for(p=1;p<=n;p++){
         if(map_.find(cur)==map_.end()){
-            map_.insert(mp(cur,p));
-        }
-        cur=(cur*an)%mod;
-    }
+            map_.insert(mp(cur,p));}
+        cur=(cur*an)%mod;}
     cur=b;
     ll mn=infl;
     for(q=0;q<=n;q++){
         if(map_.find(cur)!=map_.end()){
-            mn=min((n*map_[cur])-q,mn);
-        }
-        cur=(cur*a)%mod;
-    }
+            mn=min((n*map_[cur])-q,mn);}
+        cur=(cur*a)%mod;}
     if(mn==infl)return -1;
-    else return mn;
-}
+    else return mn;}
+/*********************prime************************/
+bitset<10000020> bl;
+int prime[664580];
+//inclusive [l,r-1] assumes prime array to be filled
+//bitset is marked indexing 0=~l//r-l<10^7
+void mark_prime(int l,int r){
+int lim=(int)sqrt((double)r);
+int i,j;
+bl.set();
+for(i=0;prime[i]<=lim;++i){
+    j=l/prime[i];
+    if(l%prime[i])j++;
+    j*=prime[i];
+    if(j==prime[i])j+=prime[i];
+    j-=l;
+    for(;j<(r-l);j+=prime[i]){
+       bl[j]=0;}}
+    return;}
