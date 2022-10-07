@@ -5,11 +5,7 @@ void dfs(int a,int p){
   for(auto v: tree[a]){
     if(v!=p && vis[v]==0){
       dfs(v,a);
-      sub[a]+=sub[v];
-    }
-  }
-  //cout<<a<<" "<<sub[a]<<endl;
-}
+      sub[a]+=sub[v];}}}
 int findCentroid(int a,int p,int num){
   bool sig=true;
   while(sig){
@@ -19,13 +15,8 @@ int findCentroid(int a,int p,int num){
         p=a;
         a=v;
         sig=true;
-        break;
-      }
-    }
-  }
-
-  return a;
-}
+        break;}}}
+return a;}
 int Decompose(int a,int p,int num){
   dfs(a,p);
   int centroid= findCentroid(a,p,num);
@@ -37,8 +28,5 @@ int Decompose(int a,int p,int num){
       ctree[centroid].pb( Decompose(v,centroid, num-sub[centroid]));
     else
       ctree[centroid].pb( Decompose(v, centroid,sub[v]));
-    cparent[ ctree[centroid].back()]= centroid;
-    }
-  }
-  return centroid;
-}
+    cparent[ ctree[centroid].back()]= centroid;}}
+  return centroid;}
