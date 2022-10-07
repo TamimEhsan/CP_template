@@ -63,13 +63,3 @@ namespace SuffixAut{
     for(auto e:s)
       extend(e);
     markTerminal();}
-  void print(){
-    for(int i=0;i<curNode;++i){
-      cout<<"Node "<<i<<":\n";
-      for(int j=0;j<AS;++j){
-        if(nodes[i].nxt[j]!=-1)
-        {
-          cout<<(char)(j+offset)<<':'<<nodes[i].nxt[j]<<'\n';}}
-      cout<<"len "<<nodes[i].len<<'\n';
-      cout<<"sufLink "<<nodes[i].sufLink<<'\n';
-      cout<<"terminal "<<nodes[i].terminal<<'\n';}}}
