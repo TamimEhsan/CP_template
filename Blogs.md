@@ -39,6 +39,7 @@
 - [Persistent segment tree ( Problems )](https://codeforces.com/blog/entry/56880)
 - [Lecture #3 — Exchange arguments (sorting with dp)](https://codeforces.com/blog/entry/63533)
 - [[Video] Hackenbush](https://www.youtube.com/watch?v=ZYj4NkeGPdM)
+- [You can do it too!](https://codeforces.com/blog/entry/103077)
 
 
 
@@ -64,7 +65,8 @@
 - [Snackdown Training Camp, Day 1](https://blog.codechef.com/2016/07/11/snackdown-training-camp-day-1/) 
 - [Snackdown Training Camp, Day 2](https://blog.codechef.com/2016/07/17/snackdown-training-camp-2016-day-2/)
 - [Snackdown Training Camp, Day 3](https://blog.codechef.com/2016/07/17/snackdown-training-camp-day-3/)
-- 
+- [BACS Training Camp](https://youtube.com/c/BangladeshAdvancedComputingSocietyBACS)
+- [BACS Training Camp Resources](https://drive.google.com/drive/u/0/folders/1es4dvlrnQ36rVcC2rxz7j6z52WjS1U-D)
 
 ## Learning Websites
 
@@ -78,6 +80,7 @@
 
 - [LighOJ](https://lightoj.com/home)
 - [CSES problemset](https://cses.fi/problemset/)
+- [Atcode problems List](https://kenkoooo.com/atcoder#/table/)
 
 ## Simple tricks
 
@@ -111,3 +114,5 @@
 - For summation of series with precision upto certain decimal, sometimes we can use integration to approximate an answer.
 
   eg. sum(1/x) for x = 1 to 10^18, we can precalculate answer upto 10^7 and add the rest with ∫(1/x) dx => ln(x), so answer will be prec[1e7] + ln(1e18) - ln(1e7)
+  
+- **FLOW: **Maximum independent set = number of vertices - maximum match

@@ -84,6 +84,7 @@ bool check(int N,int pos){return (bool)(N & (1<<pos));}
 #### Matching
 
 - Stable marriage
+- Bipartite Matching ,Unweighted (Hopcroft Karp)
 
 #### Minimum Spanning Tree
 
@@ -95,6 +96,11 @@ bool check(int N,int pos){return (bool)(N & (1<<pos));}
 - Heavy Light Decomposition
 - Lowest Common Ancestor using sparse table
 - Subtree queries
+
+#### Flow
+
+- Max Flow Min Cut (Dinic)
+- Max Flow Min Cut (Push Relabel)
 
 ### `Number Theory`
 
