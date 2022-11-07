@@ -1,15 +1,10 @@
-/**
-Iterative Implementation of FFT and FFTanymod. Complexity: O(N log N)
-
+/*Iterative Implementation of FFT and FFTanymod. Complexity: O(N log N)
 1. Whenever possible remove leading zeros.
 2. Custom Complex class may slightly improve performance.
 3. Use pairfft to do two ffts of real vectors at once, slightly less accurate
 than doing two ffts, but faster by about 30%.
 4. FFT accuracy depends on answer. x <= 5e14 (double), x <= 1e18(long double)
-   where x = max(ans[i]) for FFT, and x = N*mod for anymod
-
-   Author: anachor
-**/
+   where x = max(ans[i]) for FFT, and x = N*mod for anymod*/
 struct CD {
   double x, y;
   CD(double x=0, double y=0) :x(x), y(y) {}
@@ -100,7 +95,6 @@ const int M = 1e9+7, B = sqrt(M)+1;
       ll mid = round(round(bl[i].real()) + round(ar[i].real()));
       ans[i] = ((left%M)*B*B + (mid%M)*B + right)%M;}
     return ans;}}
-///Solves https://old.yosupo.jp/problem/convolution_mod_1000000007
   vector<LL> a(n), b(m);
   vector<LL> ans = FFT::anyMod(a, b);
   ans.resize(n+m-1);

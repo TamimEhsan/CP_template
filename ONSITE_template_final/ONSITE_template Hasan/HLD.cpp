@@ -8,7 +8,6 @@ namespace HLD{
     T (*combine)(T,T);
     T (*propagate)(T to,T from,int);
     int n;
-
     SegTree(int sz,T(*combine)(T,T), T(*propagate)(T,T,int),T* data=NULL){
       this->combine=combine;
       this->propagate=propagate;
@@ -109,7 +108,7 @@ namespace HLD{
       res=combine(res, sgt.query(pos[head[b]],pos[b]));
       b=parent[head[b]];}
     if(depth[a]>depth[b])swap(a,b);
-    res=combine(res,exclude? sgt.query(pos[a]+1,pos[b]):sgt.query(pos[a],pos[b]));
+    res=combine(res,exclude? sgt.query(pos[a]+1,pos[b]) :sgt.query(pos[a],pos[b]));
     return res.mn;}
 //  void update(int node,int val)
 //  {
