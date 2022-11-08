@@ -26,6 +26,7 @@ using namespace std;
 #define vout(x) for(int i=0;i<x.size();i++) printf("%d ",x[i]);
 #define pie acos(-1)
 #define MOD 998244353
+#define endl '\n'
 
 mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 int my_rand(int l, int r){return uniform_int_distribution<int>(l,r) (rng);}
