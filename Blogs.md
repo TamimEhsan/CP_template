@@ -40,6 +40,7 @@
 - [Lecture #3 — Exchange arguments (sorting with dp)](https://codeforces.com/blog/entry/63533)
 - [[Video] Hackenbush](https://www.youtube.com/watch?v=ZYj4NkeGPdM)
 - [You can do it too!](https://codeforces.com/blog/entry/103077)
+- [[Tutorial] Splay Tree](https://zhtluo.com/cp/splay-tree-one-tree-to-rule-them-all.html)
 
 
 
@@ -80,7 +81,15 @@
 
 - [LighOJ](https://lightoj.com/home)
 - [CSES problemset](https://cses.fi/problemset/)
-- [Atcode problems List](https://kenkoooo.com/atcoder#/table/)
+- [Atcoder problems List](https://kenkoooo.com/atcoder#/table/)
+
+
+
+## Problem Lists
+
+- [DP optimization problems by Kundu vai](https://docs.google.com/spreadsheets/d/1bhBp7C8BQyssc4LMm46FMPUHbrkzRi2CRE5tgl8WGHo/edit?fbclid=IwAR1ATq_081Ncz10WWiw4kAA5EYHH0bg87c84ZWn_vHZvFUbmBZoJ_bChcng#gid=0)
+- [Problems That Will Make You Learn Something New](https://docs.google.com/spreadsheets/d/15CK3SvWQqck-KVU6z9zVJoW0-Rikylapw9v8eXxVDGo/edit#gid=0)
+- 
 
 ## Simple tricks
 
