@@ -17,7 +17,7 @@ using namespace std;
 #define pie acos(-1)
 #define MOD 998244353
 
-struct pt {
+struct PT {
     ll x, y;
 };
 

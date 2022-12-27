@@ -15,3 +15,13 @@ void Divisors()
         for(j = i; j <= n; j += i)
             divisors[j]++;
 }
+
+
+ 
+int mo[N];
+void mobius(){
+    memset(mo, -1, sizeof mo);
+    mu[1] = 1;
+    for(int i = 2; i < N; i++)
+        for(int j = (i << 1) ; j < N; j += i)mo[j] -= mo[i];
+}

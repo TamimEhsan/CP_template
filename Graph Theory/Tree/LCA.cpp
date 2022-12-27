@@ -30,6 +30,7 @@ int my_rand(int l, int r) {
 
 
 //<<<<<<<<<<<<<<<<<<<<<<<Sparse Table Template>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\\
+
 template <class T>
 class STable {
     int n;
