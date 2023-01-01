@@ -41,6 +41,7 @@
 - [[Video] Hackenbush](https://www.youtube.com/watch?v=ZYj4NkeGPdM)
 - [You can do it too!](https://codeforces.com/blog/entry/103077)
 - [[Tutorial] Splay Tree](https://zhtluo.com/cp/splay-tree-one-tree-to-rule-them-all.html)
+- [A simple introduction to "Segment tree beats"](https://codeforces.com/blog/entry/57319)
 
 
 

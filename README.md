@@ -36,7 +36,14 @@ int reset(int N,int pos){return N= N & ~(1<<pos);}
 bool check(int N,int pos){return (bool)(N & (1<<pos));}
 ```
 
- <!-- Check the other extensions later C:\MinGW\lib\gcc\mingw32\9.2.0\include\c++\ext\pb_ds\detail -->
+ ### Pragmas
+
+```c++
+#pragma GCC optimize("O3,unroll-loops")
+#pragma GCC target("avx2,bmi,bmi2,lzcnt,popcnt")
+```
+
+<!-- Check the other extensions later C:\MinGW\lib\gcc\mingw32\9.2.0\include\c++\ext\pb_ds\detail -->
 
 
 
