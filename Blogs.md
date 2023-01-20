@@ -35,6 +35,7 @@
 - [SOS Dynamic Programming [Tutorial]](https://codeforces.com/blog/entry/45223) 
 - [Dynamic Programming Optimizations](https://codeforces.com/blog/entry/8219)
 - [1D/1D Dynamic Programming Optimization - Part I](https://sites.google.com/site/ubcprogrammingteam/news/1d1ddynamicprogrammingoptimization-parti?authuser=0)
+- [[Tutorial] Dp with connected components, a simple way to understand it.](https://codeforces.com/blog/entry/92602)
 - [বিটমাস্ক ডাইনামিক প্রোগ্রামিং](https://www.shafaetsplanet.com/?p=1357)
 - [Persistent segment tree ( Problems )](https://codeforces.com/blog/entry/56880)
 - [Lecture #3 — Exchange arguments (sorting with dp)](https://codeforces.com/blog/entry/63533)
