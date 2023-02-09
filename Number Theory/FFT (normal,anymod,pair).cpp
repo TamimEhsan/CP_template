@@ -3,6 +3,18 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+/**
+Iterative Implementation of FFT and FFTanymod. Complexity: O(N log N)
+
+1. Whenever possible remove leading zeros.
+2. Custom Complex class may slightly improve performance.
+3. Use pairfft to do two ffts of real vectors at once, slightly less accurate
+than doing two ffts, but faster by about 30%.
+4. FFT accuracy depends on answer. x <= 5e14 (double), x <= 1e18(long double)
+   where x = max(ans[i]) for FFT, and x = N*mod for anymod
+
+   Author: anachor
+**/
 
 
 //<============FFT Starts=============>\\
@@ -151,6 +163,23 @@ vector<LL> divncon(int l,int r){
     if( v.size()>k+1 ) v.resize(k+1);
     return v;
 }
+
+vector<LL> fftpow(vector<LL> a, long long b, long long m) {
+    while(a.size()>m+1) a.pop_back();
+    vector<LL> res{1};
+    while (b > 0) {
+        if (b & 1)
+            res = FFT::anyMod(res , a);
+        a = FFT::anyMod(a,a);
+        while(a.size()>m+1) a.pop_back();
+        while(res.size()>m+1) res.pop_back();
+       // for(auto r:res) cout<<r<<" ";
+       // cout<<endl;
+        b >>= 1;
+    }
+    return res;
+}
+
 
 const int N = 200009;
 int freq[N];

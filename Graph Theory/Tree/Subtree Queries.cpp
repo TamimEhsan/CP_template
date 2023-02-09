@@ -86,4 +86,8 @@ int main() {
     }
 }
 
+/**
+to update values except a subtree of u
+update from 1 to (euler[u]-1) and from (euler[u] + sz[u] + 1) to n
+
 // https://cses.fi/problemset/task/2134/
