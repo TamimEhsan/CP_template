@@ -32,6 +32,8 @@
 - [[Tutorial] Slope Trick](https://codeforces.com/blog/entry/47821) 
 - [[Tutorial] Convex Hull Trick — Geometry being useful](https://codeforces.com/blog/entry/63823)
 - [[Tutorial] Matroid intersection in simple words](https://codeforces.com/blog/entry/69287) 
+- [Centroid Decomposition](https://www.quora.com/profile/Abbas-Rangwala-13/Centroid-Decomposition-of-a-Tree)
+- [Hybrid Tutorial #-2: Centroid Decomposition](https://codeforces.com/blog/entry/81661)
 - [SOS Dynamic Programming [Tutorial]](https://codeforces.com/blog/entry/45223) 
 - [Dynamic Programming Optimizations](https://codeforces.com/blog/entry/8219)
 - [1D/1D Dynamic Programming Optimization - Part I](https://sites.google.com/site/ubcprogrammingteam/news/1d1ddynamicprogrammingoptimization-parti?authuser=0)
