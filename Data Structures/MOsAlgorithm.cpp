@@ -17,6 +17,8 @@ using namespace std;
 #define pie acos(-1)
 #define MOD 998244353
 
+
+// 1 indexed on MO array
 const int N = 300007;
 int BLOCK = 500;
 int cnt[N];
@@ -33,8 +35,8 @@ int main(){
     FASTIO;
     int n = 10;
     //cin>>n;
-    int MO[] = {1,5,2,4,1,6,7,2,2,2};
-    //for(int i=0;i<n;i++) cin>>ara[i];
+    int MO[] = {0,1,5,2,4,1,6,7,2,2,2}; // 1 indexed
+    //for(int i=1;i<=n;i++) cin>>ara[i]; // 1 indexed
     int q;
     cin>>q;
     pair<pii,pii> queries[q]; // start,end,index, ans

@@ -17,6 +17,9 @@ to the euler id of the node and create segment tree with that. And as for a path
 is increasing so, if we can somehow breakdown the problem where we can use the property on some
 segment tree we can solve the problem.
 Here, some properties can be minimum, maximum value of nodes, sum of values of nodes, xor, etc etc
+
+to use property on edges add new intermediate nodes and add property on that
+for use case see https://lightoj.com/submission/2684185
 */
 
 const int N = 2e5+5;
@@ -95,6 +98,7 @@ int path(int x, int y){
 int main() {
 	scanf("%d%d", &n, &q);
 	for(int i=1; i<=n; i++) scanf("%d", &v[i]);  //< Property on nodes
+
 	for(int i=2; i<=n; i++) {
 		int a, b;
 		scanf("%d%d", &a, &b);
