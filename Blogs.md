@@ -1,25 +1,20 @@
 # Important Blogs
 
-- **[The Ultimate Topic List (with Resources, Problems and Templates)](https://codeforces.com/blog/entry/95106)**
-- [**`The Ultimate Topic List (with Resources, Problems and Templates(Updated)`**](https://shahjalalshohag.github.io/topic-list/)
-- **[The Ultimate Equation List](https://blog.shahjalalshohag.com/equation-list/)**
+### General
+
 - [Codeforce Catalogue](https://codeforces.com/catalog)
 - [Top 10 best Codeforces blog posts of 2021 (in my humble opinion)](https://codeforces.com/blog/entry/98250)
 - [Things I don't know](https://codeforces.com/blog/entry/92248)
+- [You can do it too!](https://codeforces.com/blog/entry/103077)
+- [All the good tutorials found for Competitive Programming](https://codeforces.com/blog/entry/57282)
+- [Fast and furious C++ I/O](https://codeforces.com/blog/entry/45835)
+- 
+
+### Math/Number Theory
+
 - [Linear Recurrence and Berlekamp-Massey Algorithm](https://codeforces.com/blog/entry/61306) 
 - [Basic Lagrange Interpolation](https://codeforces.com/blog/entry/82953)
-- [Matrix Expotentiation](https://codeforces.com/blog/entry/80195)
-- Bitwise Operations
-  - [Bitwise operations for beginners](https://codeforces.com/blog/entry/73490)
-  - [Bitwise operations 2 — popcount & bitsets](https://codeforces.com/blog/entry/73558) 
-- [Algorithm Gym :: Data structures](https://codeforces.com/blog/entry/15729)
-- [Permutation Tree](https://codeforces.com/blog/entry/78898)
-- [Non-trivial DP tricks and Techniques](https://codeforces.com/blog/entry/47764)
-- [Geometry: Polygon Algorithms](https://codeforces.com/blog/entry/48868)
-- [Hashing](https://codeforces.com/blog/entry/60445)
-- [Dynamic Convex Hull](https://codeforces.com/blog/entry/75929)
-- [Fast and furious C++ I/O](https://codeforces.com/blog/entry/45835)
-- [Centroid Decomposition on a tree(Beginner)](https://codeforces.com/blog/entry/73707)
+- [Matrix Exponentiation](https://codeforces.com/blog/entry/80195)
 - [Number Theory in Competitive Programming](https://artofproblemsolving.com/community/c90633h1291397) 
 - [[Tutorial] Burnside's lemma (with example)](https://codeforces.com/blog/entry/62401)
 - [[Video]Burnside's lemma: counting up to symmetries](https://www.youtube.com/watch?v=D0d9bYZ_qDY&t=674s)
@@ -28,29 +23,57 @@
 - [[Tutorial] Math note — Dirichlet convolution](https://codeforces.com/blog/entry/54150)
 - [[Tutorial] Generating Functions in Competitive Programming (Part 1)](https://codeforces.com/blog/entry/77468) 
 - [[Tutorial] Generating Functions in Competitive Programming (Part 2)](https://codeforces.com/blog/entry/77551) 
-- [[Tutorial] Non-trivial DP Tricks and Techniques](https://codeforces.com/blog/entry/47764) 
-- [[Tutorial] Slope Trick](https://codeforces.com/blog/entry/47821) 
-- [[Tutorial] Convex Hull Trick — Geometry being useful](https://codeforces.com/blog/entry/63823)
+- 
+
+### Game Theory
+
+- [[Video] Hackenbush](https://www.youtube.com/watch?v=ZYj4NkeGPdM)
+- 
+
+### Bitwise Operations
+
+- [Bitwise operations for beginners](https://codeforces.com/blog/entry/73490)
+- [Bitwise operations 2 — popcount & bitsets](https://codeforces.com/blog/entry/73558) 
+- 
+
+### Data Structure
+
+- [Algorithm Gym :: Data structures](https://codeforces.com/blog/entry/15729)
+- [Permutation Tree](https://codeforces.com/blog/entry/78898)
+- [Hashing](https://codeforces.com/blog/entry/60445)
+- [Centroid Decomposition on a tree(Beginner)](https://codeforces.com/blog/entry/73707)
 - [[Tutorial] Matroid intersection in simple words](https://codeforces.com/blog/entry/69287) 
 - [Centroid Decomposition](https://www.quora.com/profile/Abbas-Rangwala-13/Centroid-Decomposition-of-a-Tree)
 - [Hybrid Tutorial #-2: Centroid Decomposition](https://codeforces.com/blog/entry/81661)
+- [Persistent segment tree ( Problems )](https://codeforces.com/blog/entry/56880)
+- [[Tutorial] Splay Tree](https://zhtluo.com/cp/splay-tree-one-tree-to-rule-them-all.html)
+- [A simple introduction to "Segment tree beats"](https://codeforces.com/blog/entry/57319)
+- [Block Decomposition (Part - 01) - MO's Algo](https://rezwanarefin01.github.io/posts/block-decomposition-01/)
+- 
+
+### DP
+
+- [Non-trivial DP tricks and Techniques](https://codeforces.com/blog/entry/47764)
+- [[Tutorial] Non-trivial DP Tricks and Techniques](https://codeforces.com/blog/entry/47764) 
+- [[Tutorial] Slope Trick](https://codeforces.com/blog/entry/47821) 
+- [[Tutorial] Convex Hull Trick — Geometry being useful](https://codeforces.com/blog/entry/63823)
 - [SOS Dynamic Programming [Tutorial]](https://codeforces.com/blog/entry/45223) 
 - [Dynamic Programming Optimizations](https://codeforces.com/blog/entry/8219)
 - [1D/1D Dynamic Programming Optimization - Part I](https://sites.google.com/site/ubcprogrammingteam/news/1d1ddynamicprogrammingoptimization-parti?authuser=0)
 - [[Tutorial] Dp with connected components, a simple way to understand it.](https://codeforces.com/blog/entry/92602)
 - [বিটমাস্ক ডাইনামিক প্রোগ্রামিং](https://www.shafaetsplanet.com/?p=1357)
-- [Persistent segment tree ( Problems )](https://codeforces.com/blog/entry/56880)
-- [Lecture #3 — Exchange arguments (sorting with dp)](https://codeforces.com/blog/entry/63533)
-- [[Video] Hackenbush](https://www.youtube.com/watch?v=ZYj4NkeGPdM)
-- [You can do it too!](https://codeforces.com/blog/entry/103077)
-- [[Tutorial] Splay Tree](https://zhtluo.com/cp/splay-tree-one-tree-to-rule-them-all.html)
-- [A simple introduction to "Segment tree beats"](https://codeforces.com/blog/entry/57319)
 - [[Video] Tree Rerooting DP](https://youtu.be/jFSUQmxCoUI?t=1691)
+- [Digit Dp](https://codeforces.com/blog/entry/53960)
+- [Lecture #3 — Exchange arguments (sorting with dp)](https://codeforces.com/blog/entry/63533)
+- [Dynamic Programming Optimization - IOI'16 Aliens Trick](https://rezwanarefin01.github.io/posts/ioi16-aliens-trick/)
 
+### Geometry
 
+- [Geometry: Polygon Algorithms](https://codeforces.com/blog/entry/48868)
 
-- https://codeforces.com/blog/entry/57282s
-- [The On-Line Encyclopedia of Integer Sequences](https://oeis.org/)
+- [Dynamic Convex Hull](https://codeforces.com/blog/entry/75929)
+
+  
 
 
 
@@ -59,8 +82,11 @@
 - [Graph editor](https://csacademy.com/app/graph_editor/)
 - [The On-Line Encyclopedia of Integer Sequences (OEIS)](https://oeis.org/)
 
-## Github Repositories:
+## Github Repositories / Code Library:
 
+- **[The Ultimate Topic List (with Resources, Problems and Templates)](https://codeforces.com/blog/entry/95106)**
+- [**`The Ultimate Topic List (with Resources, Problems and Templates(Updated)`**](https://shahjalalshohag.github.io/topic-list/)
+- **[The Ultimate Equation List](https://blog.shahjalalshohag.com/equation-list/)**
 - [competitive-programming-library](https://github.com/mochow13/competitive-programming-library)
 - [ACM Library](https://github.com/AnikSarker/ACM-Library)
 - [AlgoVault](https://github.com/sgtlaugh/algovault)
@@ -79,6 +105,7 @@
 - [USACO guide](https://usaco.guide/adv/LC?lang=cpp) 
 - [ শাফায়েতের ব্লগ](https://www.shafaetsplanet.com/)
 - [Algo Wiki](https://wiki.algo.is/_index)
+- [Rezwan's CP Blog](https://rezwanarefin01.github.io/)
 
 
 

@@ -68,8 +68,7 @@ General:
 #### Stirling Number of Second Kind
 
 <hr>
-
-**Defination**: Stirling number of the second kind (or Stirling partition number) is the number of ways to partition a set of n objects into k non-empty subsets and is denoted by S(n,k)
+**Definition**: Stirling number of the second kind (or Stirling partition number) is the number of ways to partition a set of n objects into k non-empty subsets and is denoted by S(n,k)
 
 **Values:**
 

@@ -43,6 +43,17 @@ bool check(int N,int pos){return (bool)(N & (1<<pos));}
 #pragma GCC target("avx2,bmi,bmi2,lzcnt,popcnt")
 ```
 
+**Codeforces Version**
+
+```c++
+#pragma GCC optimize("Ofast")
+#pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,avx2,fma")
+#pragma GCC optimize("unroll-loops")
+#pragma GCC optimize("O3")
+```
+
+
+
 <!-- Check the other extensions later C:\MinGW\lib\gcc\mingw32\9.2.0\include\c++\ext\pb_ds\detail -->
 
 
