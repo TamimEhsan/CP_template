@@ -1,130 +1,84 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
-#define pii pair<int,int>
-#define ll long long
 #define FASTIO ios_base::sync_with_stdio(false);cin.tie(NULL); cout.tie(NULL);
 #define endl '\n'
 
-const int N = 200005;
 
-int getLuck(int x){
-    string s = to_string(x);
-    sort(s.begin(),s.end());
-    return s[s.size()-1]-s[0];
+const int N = 12;
+const int M1 = 105;
+const int M2 = 105;
+
+int dp[N][M1][M2][2];
+
+string s;
+int K;
+
+int getAns(int x){
+   // if( x == 0 ) return 0;
+   // this also takes account 0, so keep in mind that. in this case ans[b]-ans[a-1] has both
+   // zero case so it is omitted by default. Else handle carefully
+    s = to_string(x);
+    int n = s.size();
+    for(int i=0;i<N;i++){
+        for(int j=0;j<M1;j++){
+            for(int k=0;k<M2;k++){
+                for(int f=0;f<2;f++){
+                    dp[i][j][k][f] = 0;
+                }
+            }
+        }
+    }
+    dp[0][0][0][1] = 1;
+
+    s = "#"+s;
+    for(int i=1;i<=n;i++){
+        for(int j=0;j<K;j++){
+            for(int k=0;k<K;k++){
+                for(int f=0;f<2;f++){
+                    // if( dp[i-1][j][f] == 0 ) continue;
+                    // i is the current index
+                    // j is the value of previous state
+                    // k is the sum of previous digits
+                    // f is the sate of being same of previous state
+
+
+                    // previous states have at least one digit which is less that s
+                    // so we can put any digits here when f
+                    int dd = s[i]-'0';
+                    int up = 9;
+                    // previous states has all digits same as s, so we cant go upper that
+                    // s[i]
+                    if(f == 1) up = dd;
+                    for(int d=0;d<=up;d++){
+                        // we maintain prefix equality when f is 1 and d = s[i]
+                        int nf = f && (d == int(s[i] - '0'));
+                        dp[i][(j*10+d)%K][(k+d)%K][nf]+=dp[i-1][j][k][f];
+                    }
+
+                }
+            }
+        }
+    }
+    return dp[n][0][0][0]+dp[n][0][0][1];
 }
-
-int get_min(string &s){
-
-    int mn = s[0] - '0';
-    for(int i=0;i<s.size();i++) mn = min( mn, s[i]-'0' );
-    return mn;
-
-}
-
-int get_max(string &s){
-
-    int mx = s[0] - '0';
-    for(int i=0;i<s.size();i++) mx = max( mx, s[i]-'0' );
-    return mx;
-
-}
-
 void solve(){
-    string sl,sr;
-    cin>>sl>>sr;
-
-    int mn = get_max(sl) - get_min(sl);
-    string res = sl;
-    int temp = get_max(sr) - get_min(sr);
-    if( temp<mn ){
-        mn = temp;
-        res = sr;
-    }
-    // case 1: l has less digits than r, so we can change each digits of l to any digit
-    if( sl.size()<sr.size() ){
-        for(int i=0;i<sl.size();i++) cout<<9;
-        cout<<endl;
+    int a,b;
+    cin>>a>>b>>K;
+    if( K > 100 ) {
+        cout<<0<<endl;
         return;
     }
-    // else we have some prefix of l and r to be same, so, those must be same for our answer too
-    int firstDif = -1;
-    for(int i=0;i<sl.size();i++){
-        if( sl[i]!=sr[i] ){
-            firstDif = i;
-            break;
-        }
-    }
-    // now firstDif has the first index where the digits are different
-    // case 2: all are same ie l = r
-    if( firstDif == -1 ){
-        cout<<sl<<endl;
-        return;
-    }
-    // case 3: first diff,fd position will have digit strictly greater than sl[fd]
-    // and strictly less than sr[fd], remaining digits can be anything,
-    // just make them equal to res[fd]
-    for(int d=sl[firstDif]-'0'+1;d<sr[firstDif]-'0';d++){
-        string tres = sl;
-        for(int j=firstDif;j<sl.size();j++)
-            tres[j] = d+'0';
-        int temp = get_max(tres) - get_min(tres);
-        if( temp<mn ){
-            mn = temp;
-            res = tres;
-        }
-    }
-    // case 4: prefix of tres is same as sl and the next digit is strictly greater than that of sl
-    // other digits can be anything, thus make them equal
-    for(int i=firstDif+1;i<sl.size();i++){
-        for(int d=sl[i]-'0'+1;d<10;d++){
-            string tres = sl;
-            for(int j=i;j<sl.size();j++){
-                tres[j] = d+'0';
-            }
-            int temp = get_max(tres) - get_min(tres);
-            if( temp<mn ){
-                mn = temp;
-                res = tres;
-            }
-        }
-    }
-    // case 5: prefix of tres is same as sr and the next digit is strictly smaller than that of sr
-    // other digits can be anything, thus make them equal
-    for(int i=firstDif+1;i<sr.size();i++){
-        for(int d=sr[i]-'0'-1;d>=0;d--){
-            string tres = sr;
-            for(int j=i;j<sr.size();j++){
-                tres[j] = d+'0';
-            }
-            int temp = get_max(tres) - get_min(tres);
-            if( temp<mn ){
-                mn = temp;
-                res = tres;
-            }
-        }
-    }
-    cout<<res<<endl;
+    cout<<getAns(b)-getAns(a-1)<<endl;;
 }
 
 int main(){
     FASTIO;
-    int tc=1;
+    int tc;
     cin>>tc;
-
-    while(tc--){
+    for(int t=1;t<=tc;t++){
+        cout<<"Case "<<t<<": ";
         solve();
     }
 }
 
-// https://codeforces.com/contest/1808/problem/C
-
-/*
-2
-2 2
-..
-*.
-2 4
-*..*
-*.*.
-
-*/
+// https://lightoj.com/problem/investigation

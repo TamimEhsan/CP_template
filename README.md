@@ -62,11 +62,16 @@ bool check(int N,int pos){return (bool)(N & (1<<pos));}
 
 ###  `Data Structures`
 
-- Disjoint Set Union
+- Segment tree
+  - 2D segment tree
+  - Lazy propagation
+  - Segment tree beats
+  - Merge sort tree
 - Fenwick Tree
   - Prefix Sum 
     - Point update, Range query
   - Distinct values in a range
+- Disjoint Set Union
 - Fractions
 - Implicit Treap
 - Matrix
@@ -76,12 +81,9 @@ bool check(int N,int pos){return (bool)(N & (1<<pos));}
   - Fenwick tree
 - Range Max Query Segment tree with lazy propagation
 - Sparse Table for Range Query with no update
-- Segment tree
-  - 2D segment tree
-  - Lazy propagation
-
-- Merge sort tree
+- Ternary Search
 - Unordered Map with Custom Hash
+- Wavelet Tree
 
 ### `Geometry`
 
@@ -95,15 +97,34 @@ bool check(int N,int pos){return (bool)(N & (1<<pos));}
 
 - Articulation Point
 - Bridge
+  - Offline
+  - Online
+
+- Condensation Graph
 - Dijkstra
+- Dominator Tree
 - Dynamic Connectivity (DSU online)
 - Floyd Warshall (all pair shortest path)
 - Strongly Connected Component
+
+#### Flow
+
+- Max Flow Min Cost
+- Max Flow Min Cut (Dinic)
+- Max Flow Min Cut (Push Relabel)
+
+#### Graph
+
+- Euler Tour 
+  - Circuit Undirected
+  - Circuit Directed
+  - Path Directed
 
 #### Matching
 
 - Stable marriage
 - Bipartite Matching ,Unweighted (Hopcroft Karp)
+- Bipartite Matching ,Weighted (Hungarian)
 
 #### Minimum Spanning Tree
 
@@ -113,13 +134,16 @@ bool check(int N,int pos){return (bool)(N & (1<<pos));}
 
 - Centroid Decomposition
 - Heavy Light Decomposition
-- Lowest Common Ancestor using sparse table
+- Lowest Common Ancestor 
+  - Sparse table
+  - Binary Lifting
+- MO on Tree
+- Query on Edge
 - Subtree queries
+- Tree Isomorphism
+- Tree rerooting DP
 
-#### Flow
 
-- Max Flow Min Cut (Dinic)
-- Max Flow Min Cut (Push Relabel)
 
 ### `Number Theory`
 
@@ -132,18 +156,21 @@ bool check(int N,int pos){return (bool)(N & (1<<pos));}
 - Euler totient function (1-N in O(N))
 - Faulhaber's triangle (Σi^k upto n)
 - Fast Fourier Transformation
+  - Any mod (slower)
+  - Specific mods (faster)
+
 - Fast Walsh Hadamard Transformation
 - Fibonacci Numbers
   - O(logn) recursive
   - O(logn) matrix exponentiation
 - Harmonic Progression (sum over floor of n over i)
-- Linear Recurrance
+- Linear Recurrence
 - Linear sieve for Multiplicative Functions
   - Prime numbers
   - Divisor Count
   - Divisor Sum
   - Mobius Function
-- Maximum xor of a subset
+- Basis Set
   - With no update (offline)
   - With update (online)
 - Prime Numbers
@@ -161,6 +188,7 @@ bool check(int N,int pos){return (bool)(N & (1<<pos));}
 ### `String`
 
 - Aho Corasick Algorithm
+- Manacher
 - Palindromic Tree
 - Prefix function
 - String Hashing (Double hashing)
@@ -175,3 +203,10 @@ bool check(int N,int pos){return (bool)(N & (1<<pos));}
 
 - Convex Hull Trick Generalized
 - Convex Hull Trick Monotonous
+- Digit Dp
+
+### `Game Theory`
+
+- Green Hackenbush
+- Grundy
+

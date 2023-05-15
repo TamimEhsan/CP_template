@@ -1,3 +1,11 @@
+/**
+Max flow min cost
+if we want k flow min cost, just add a dummy node with source with a edge with capacity k and cost 0
+
+If we want to find which edge contributed what amount, we can check the flow variable in edge,
+thus can reconstruct the flow graph too U w U
+*/
+
 #include<bits/stdc++.h>
 using namespace std;
 #define F first
@@ -13,7 +21,7 @@ typedef vector<int> vi;
 
 typedef long long T1;//for cost
 typedef long long T2;//for flow
-const int maxn = 110;
+const int maxn = 5005;
 const T1 INF = 1e12;
 const T2 inf = 1e12;
 const T1 eps = 0;
@@ -88,37 +96,29 @@ struct MCMF {//0-indexed
 };
 
 void solve(){
-    int n;
-    cin>>n;
+    int n,m,k;
+    cin>>n>>m>>k;
     MCMF mcmf;
-    mcmf.init(2*n+2);
+    mcmf.init(n+2);
 
-    int s=0,t=2*n+1;
+    int s=0,t=n;
 
-    for(int i=1;i<=n;i++){
-        for(int j=1;j<=n;j++){
-            int c;
-            cin>>c;
-            mcmf.AddEdge(i,j+n,1,-c);
-        }
+    for(int i=1;i<=m;i++){
+        int from,to,cap,cost;
+        cin>>from>>to>>cap>>cost;
+        mcmf.AddEdge(from,to,cap,cost);
+
     }
-    for(int i=1;i<=n;i++){
-        mcmf.AddEdge(s,i,1,0);
-        mcmf.AddEdge(i+n,t,1,0);
-    }
+    mcmf.AddEdge(0,1,k,0);
 
-    cout<<-mcmf.Mincost(s,t).first<<endl;
+    auto [c,f] = mcmf.Mincost(s,t);
+    cout<<(f==k?c:-1)<<endl;
 }
 
 int main(){
     FASTIO;
+    solve();
 
-    int tc;
-    cin>>tc;
-    for(int t=1;t<=tc;t++){
-        cout<<"Case "<<t<<": ";
-        solve();
-    }
 }
 
-// https://lightoj.com/problem/gift-packing
+// https://cses.fi/problemset/task/2121/

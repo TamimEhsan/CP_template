@@ -23,7 +23,10 @@
 - [[Tutorial] Math note — Dirichlet convolution](https://codeforces.com/blog/entry/54150)
 - [[Tutorial] Generating Functions in Competitive Programming (Part 1)](https://codeforces.com/blog/entry/77468) 
 - [[Tutorial] Generating Functions in Competitive Programming (Part 2)](https://codeforces.com/blog/entry/77551) 
-- 
+- [Sums and Expected Value - part 1](https://codeforces.com/blog/entry/62690)
+- [Sums and Expected Value - part 2](https://codeforces.com/blog/entry/62792)
+- [OR Convolution for Common People](https://codeforces.com/blog/entry/115438)
+- [Shift of polynomial sampling points](https://codeforces.com/blog/entry/115696)
 
 ### Game Theory
 
@@ -34,7 +37,6 @@
 
 - [Bitwise operations for beginners](https://codeforces.com/blog/entry/73490)
 - [Bitwise operations 2 — popcount & bitsets](https://codeforces.com/blog/entry/73558) 
-- 
 
 ### Data Structure
 
@@ -66,6 +68,16 @@
 - [Digit Dp](https://codeforces.com/blog/entry/53960)
 - [Lecture #3 — Exchange arguments (sorting with dp)](https://codeforces.com/blog/entry/63533)
 - [Dynamic Programming Optimization - IOI'16 Aliens Trick](https://rezwanarefin01.github.io/posts/ioi16-aliens-trick/)
+- [[Tutorial]Using Segment Trees to solve Dynamic Programming problems](https://codeforces.com/blog/entry/101210)
+- [Process DP](https://codeforces.com/blog/entry/100918)
+
+
+
+### Graph Theory
+
+- [Dominator Tree](https://www.dropbox.com/s/2ubl00x2zzkojsr/dominator.pdf?dl=0)
+
+
 
 ### Geometry
 
@@ -114,6 +126,7 @@
 - [LighOJ](https://lightoj.com/home)
 - [CSES problemset](https://cses.fi/problemset/)
 - [Atcoder problems List](https://kenkoooo.com/atcoder#/table/)
+- [A2OJ Ladders](https://a2oj.netlify.app/ladders)
 
 
 

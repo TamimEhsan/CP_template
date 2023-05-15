@@ -26,6 +26,7 @@ struct Basis{
 
     void insert(int x){
         for(int i=LOG_A-1;i>=0;i--){
+            if ((x & 1 << i) == 0) continue;
             if( !basis[i] ){
                 basis[i] = x;
                 return;
