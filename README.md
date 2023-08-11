@@ -27,6 +27,7 @@ using namespace std;
 #define pie acos(-1)
 #define MOD 998244353
 #define endl '\n'
+#define infile freopen("input.in","r",stdin);
 
 mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 int my_rand(int l, int r){return uniform_int_distribution<int>(l,r) (rng);}

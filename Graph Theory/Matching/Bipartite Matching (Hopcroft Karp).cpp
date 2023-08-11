@@ -90,5 +90,10 @@ int main(){
 // https://cses.fi/problemset/task/1696/
 
 /**
+in Bipartite graph : graph with no odd cycle
 Maximum independent set = number of vertices - maximum match
+hk.add(i,j);
+hk.add(j,i);
+MIS: n-hk.matching(n)/2
+https://open.kattis.com/problems/codenames
 */

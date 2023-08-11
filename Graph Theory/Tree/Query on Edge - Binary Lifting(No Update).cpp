@@ -2,6 +2,8 @@
 using namespace std;
 const int MAXN=100005, LOG=20;
 
+
+// DO NOT FORGET TO DECLARE n AS GLOBAL!
 struct Cell{
     int to;
     int w;

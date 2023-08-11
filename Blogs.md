@@ -169,4 +169,4 @@
 
   eg. sum(1/x) for x = 1 to 10^18, we can precalculate answer upto 10^7 and add the rest with ∫(1/x) dx => ln(x), so answer will be prec[1e7] + ln(1e18) - ln(1e7)
   
-- **FLOW: **Maximum independent set = number of vertices - maximum match
+- **FLOW: **Maximum independent set = number of vertices - maximum match (in bipartite graph)
