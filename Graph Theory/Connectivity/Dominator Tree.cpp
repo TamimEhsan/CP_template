@@ -24,6 +24,12 @@ using namespace std;
 #define Max 1000000
 #define sz(u) u.size()
 
+
+/**
+A city is called a critical city if it appears on every route from a city to another city.
+The roads are one way
+
+*/
 struct DominatorTree {
     vector <int> g[Max], tree[Max],bucket[Max],rg[Max];
     int sdom[Max],dom[Max],label[Max],arr[Max],rev[Max],T;

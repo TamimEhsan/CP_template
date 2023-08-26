@@ -1,14 +1,39 @@
-//Determinant + Inverse Tested : Codechef - CSTREE
-//1 indexed
-// Matrix entry is A.m[i,j]
-
-
 #include<bits/stdc++.h>
 using namespace std;
-#define MAX 105
-#define ll long long int
-const ll MOD = 1e9 + 7;
+#define INF 2147483647
+#define INFL 9223372036854775807
+#define pii pair<int,int>
+#define F first
+#define S second
+#define mp make_pair
+#define pb push_back
+#define ll long long
+#define ull unsigned long long
+#define M 1000'000'007
+#define FASTIO ios_base::sync_with_stdio(false);cin.tie(NULL); cout.tie(NULL);
+#define take(x) scanf("%d",&x)
+#define DE(x) printf("\ndebug %d\n",x);
+#define vout(x) for(int i=0;i<x.size();i++) printf("%d ",x[i]);
+#define pie acos(-1)
+//#define MOD 998244353
+#define FILEOUT {ofstream cout; cout.open ("example.txt");}
+
+
+
+/**
+    1-indexed
+    but the sizes can be initialized with n,m (handled internally as n+1,m+1)
+*/
+
+ll MOD = 1000003;
 const ll MOD2 = MOD * MOD * 3;
+
+int Set(int N,int pos){return N=N | (1<<pos);}
+int reset(int N,int pos){return N= N & ~(1<<pos);}
+bool check(int N,int pos){return (bool)(N & (1<<pos));}
+
+const int MAX = 105;
+
 
 inline ll bigMod(ll a,ll b){
     ll res=1;
@@ -18,10 +43,6 @@ inline ll bigMod(ll a,ll b){
     }
     return res;
 }
-
-inline ll inv(ll n) {return bigMod(n,MOD-2);}
-inline ll Mul(ll a,ll b) {return (a*b)%MOD;}
-inline ll Div(ll a,ll b) {return Mul(a,inv(b));}
 
 struct Matrix{
     int row, col;
@@ -53,13 +74,14 @@ Matrix Multiply(Matrix A,Matrix B){
             ans.m[i][j] = sm % MOD;
         }
     }
+
     return ans;
 }
 
 Matrix Power(Matrix mat,ll p){
+
     Matrix res(mat.row , mat.col);
     Matrix ans(mat.row , mat.col);
-
     int n = ans.row;
     for(int i=1;i<=n;i++){
         for(int j=1;j<=n;j++){
@@ -68,100 +90,38 @@ Matrix Power(Matrix mat,ll p){
         }
         ans.m[i][i]=1;
     }
-
     while(p){
         if(p&1) ans=Multiply(ans,res);
         res=Multiply(res,res);
         p=p/2;
     }
+
     return ans;
 }
 
-ll Det(Matrix mat){
-    assert(mat.row == mat.col);
-    int n = mat.row;
-    mat.normalize();
 
-    ll ret = 1;
-    for(int i = 1; i <= n; i++){
-        for(int j = i + 1; j <= n; j++){
-            while(mat.m[j][i]){
-                ll t = Div(mat.m[i][i], mat.m[j][i]);
-                for(int k = i; k <= n; ++k){
-                    mat.m[i][k] -= Mul(mat.m[j][k] , t);
-                    if(mat.m[i][k] < 0) mat.m[i][k] += MOD;
-                    swap(mat.m[j][k], mat.m[i][k]);
-                }
-                ret = MOD - ret;
-            }
-        }
+int main(){
+    int n,w,h;
+    cin>>n>>w>>h;
 
-        if(mat.m[i][i] == 0) return 0;
-        ret = Mul(ret, mat.m[i][i]);
+
+    Matrix mult2(w+1,w+1),mult1(1,w+1);
+    for(int i=1;i<=w+1;i++){
+        mult1.m[1][i+1] = 0;
     }
+    mult1.m[1][1] = 1;
+     for(int i=0;i<=w;i++) for(int j=0;j<=w;j++) {
+        if( j == 0 ) mult2.m[i+1][j+1] = 1;
+        else if( j==i+1 ) mult2.m[i+1][j+1] = h;
+     }
 
-    if(ret < 0) ret += MOD;
-    return ret;
-}
 
-ll Tmp[MAX<<1][MAX<<1];
-Matrix Inverse(Matrix mat){
-    assert(mat.row == mat.col);
-    assert(Det(mat) != 0);
-
-    int n = mat.row;
-    mat.normalize();
-    for(int i=1;i<=n;i++){
-        for(int j=1;j<=n;j++) Tmp[i][j] = mat.m[i][j];
-        for(int j=n+1; j<=2*n; j++) Tmp[i][j] = 0;
-        Tmp[i][i+n] = 1;
+    /*for(int i=0;i<=w;i++){
+        for(int j=0;j<=w;j++) cout<<mult2.m[i+1][j+1]<<" ";
+        cout<<endl;
     }
+    cout<<endl;
+    for(int i=0;i<1;i++) for(int j=0;j<=w;j++) cout<<mult1.m[i+1][j+1]<<" "; cout<<endl;*/
+      cout<<Multiply(mult1,Power(mult2,n+1)).m[1][1]<<endl;;
 
-    for(int i=1; i<=n; i++){
-        assert(Tmp[i][i] != 0);
-
-        for(int j=1; j<=n; j++){
-            if(i == j) continue;
-            ll c = Div(Tmp[j][i], Tmp[i][i]);
-            for(int k=i; k<=2*n; k++){
-                Tmp[j][k] = Tmp[j][k] - Mul(Tmp[i][k], c);
-                if(Tmp[j][k] < 0) Tmp[j][k] += MOD;
-            }
-        }
-    }
-
-    Matrix Inv(n,n);
-    for(int i=1; i<=n; i++){
-        for(int j = 1; j <= n; j++){
-            Inv.m[i][j] = Div(Tmp[i][j+n], Tmp[i][i]);
-        }
-    }
-    return Inv;
-}
-
-//Freivalds algorithm : check whether AB = C
-//Complexity : O(iteration * n^2)
-int p[MAX],q[MAX],r[MAX];
-bool Freivalds(Matrix A,Matrix B,Matrix C){
-    srand(time(NULL));
-    int n=A.row;
-    int iteration=15;
-
-    int Yes=0;
-    for(int i=1;i<=iteration;i++){
-        for(int i=1;i<=n;i++) r[i] = rand()%2;
-        for(int i=1;i<=n;i++) p[i] = q[i] = 0;
-
-        for(int i=1;i<=n;i++) for(int j=1;j<=n;j++)
-                p[i] += r[j] * A.m[i][j];
-        for(int i=1;i<=n;i++) for(int j=1;j<=n;j++)
-                q[i] += p[j] * B.m[i][j];
-        for(int i=1;i<=n;i++) for(int j=1;j<=n;j++)
-                q[i] -= r[j] * C.m[i][j];
-
-        bool All = true;
-        for(int i=1;i<=n;i++) if(q[i]) All=false;
-        if(All) Yes++;
-    }
-    return Yes == iteration;
 }

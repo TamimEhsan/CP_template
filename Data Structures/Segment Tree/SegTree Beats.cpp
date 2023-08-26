@@ -5,6 +5,12 @@ const int maxn = 1000005;
 #define FASTIO ios_base::sync_with_stdio(false);cin.tie(NULL); cout.tie(NULL);
 
 #define endl '\n'
+
+
+/**
+update range with a[i] = min( a[i],val)
+query max, sum in range
+*/
 int A[maxn];
 
 struct Data{
