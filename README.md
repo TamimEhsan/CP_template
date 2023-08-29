@@ -69,28 +69,37 @@ bool check(int N,int pos){return (bool)(N & (1<<pos));}
   - Segment tree beats
   - Merge sort tree
 - Fenwick Tree
-  - Prefix Sum 
-    - Point update, Range query
+  - BIT 2D
+  - Point update, Range query
   - Distinct values in a range
+- Persisant Segment Tree
+  - OST in range
+  - Sum over range and copy
 - Disjoint Set Union
 - Fractions
-- Implicit Treap
+- LIS
+- MOSs Algorithm
 - Matrix
 - MO's Algorithm
 - Ordered statistics tree
   - Built In
   - Fenwick tree
-- Range Max Query Segment tree with lazy propagation
 - Sparse Table for Range Query with no update
-- Ternary Search
+- Ternary Search (Double)
+- Treap
 - Unordered Map with Custom Hash
 - Wavelet Tree
 
 ### `Geometry`
 
+- Template of Rafid vai
+- Template of Radiant
 - Convex Hull
 - Line segment intersection
+- Minkowski Sum of Convex Polygon
 - Polygon area
+- Polar Sort
+- Winding Number (To check position of point in a polygon)
 
 ### `Graph Theory`
 
@@ -100,7 +109,6 @@ bool check(int N,int pos){return (bool)(N & (1<<pos));}
 - Bridge
   - Offline
   - Online
-
 - Condensation Graph
 - Dijkstra
 - Dominator Tree
@@ -127,10 +135,6 @@ bool check(int N,int pos){return (bool)(N & (1<<pos));}
 - Bipartite Matching ,Unweighted (Hopcroft Karp)
 - Bipartite Matching ,Weighted (Hungarian)
 
-#### Minimum Spanning Tree
-
-- Kirchoff's Minimum Spanning tree number
-
 #### Tree
 
 - Centroid Decomposition
@@ -139,10 +143,11 @@ bool check(int N,int pos){return (bool)(N & (1<<pos));}
   - Sparse table
   - Binary Lifting
 - MO on Tree
-- Query on Edge
+- Query on Edge (No update)
 - Subtree queries
 - Tree Isomorphism
 - Tree rerooting DP
+- Kirchoff's Minimum Spanning tree number
 
 
 
@@ -151,20 +156,21 @@ bool check(int N,int pos){return (bool)(N & (1<<pos));}
 - Berlekamp–Massey for finding linear recurrence
 - Big Integer (unary, binary operators, binary,unary comparators,gcd)
 - Bigmod
+- Chinese Reminder Theorem (Generalized)
 - Catalan's Number
 - Derangement
 - Determinant of a matrix by Gauss method for solving systems of linear equations
 - Euler totient function (1-N in O(N))
 - Faulhaber's triangle (Σi^k upto n)
 - Fast Fourier Transformation
-  - Any mod (slower)
-  - Specific mods (faster)
-
 - Fast Walsh Hadamard Transformation
+- Factorizing upto 10^9
 - Fibonacci Numbers
   - O(logn) recursive
   - O(logn) matrix exponentiation
 - Harmonic Progression (sum over floor of n over i)
+- Floor Sum or Arithmatic Progression
+- Linear Diophantine Equation
 - Linear Recurrence
 - Linear sieve for Multiplicative Functions
   - Prime numbers
@@ -178,6 +184,7 @@ bool check(int N,int pos){return (bool)(N & (1<<pos));}
   - Sieve of Eratosthenes in O(n)
   - Miller Rabin deterministic primality test
 - PIE
+- Pollard's Rho of Integer Factorization
 - C(n,r)
   - Single query  	=> recursion
   - Multiple query  => memorization
@@ -189,6 +196,8 @@ bool check(int N,int pos){return (bool)(N & (1<<pos));}
 ### `String`
 
 - Aho Corasick Algorithm
+  - Static
+  - Dynamic
 - Manacher
 - Palindromic Tree
 - Prefix function
@@ -204,7 +213,10 @@ bool check(int N,int pos){return (bool)(N & (1<<pos));}
 
 - Convex Hull Trick Generalized
 - Convex Hull Trick Monotonous
+   Knuth Optimization
+- Divide and Conquer DP (with MO like cost function update)
 - Digit Dp
+- Exchange Arguments With Knapsack
 
 ### `Game Theory`
 
