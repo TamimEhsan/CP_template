@@ -25,8 +25,17 @@
 - [[Tutorial] Generating Functions in Competitive Programming (Part 2)](https://codeforces.com/blog/entry/77551) 
 - [Sums and Expected Value - part 1](https://codeforces.com/blog/entry/62690)
 - [Sums and Expected Value - part 2](https://codeforces.com/blog/entry/62792)
-- [OR Convolution for Common People](https://codeforces.com/blog/entry/115438)
+
+
+
+#### FFT, Polynomial and Similar
 - [Shift of polynomial sampling points](https://codeforces.com/blog/entry/115696)
+- [Operations on Formal Power Series](https://codeforces.com/blog/entry/56422)
+- [CDQ convolution (online FFT) generalization with Newton method](https://codeforces.com/blog/entry/111399)
+- [A problem collection of ODE and differential technique](https://codeforces.com/blog/entry/76447)
+- [[Tutorial] FFT](https://codeforces.com/blog/entry/111371)
+
+
 
 ### Game Theory
 
@@ -37,6 +46,7 @@
 
 - [Bitwise operations for beginners](https://codeforces.com/blog/entry/73490)
 - [Bitwise operations 2 — popcount & bitsets](https://codeforces.com/blog/entry/73558) 
+- - [OR Convolution for Common People](https://codeforces.com/blog/entry/115438)
 
 ### Data Structure
 
@@ -76,6 +86,7 @@
 ### Graph Theory
 
 - [Dominator Tree](https://www.dropbox.com/s/2ubl00x2zzkojsr/dominator.pdf?dl=0)
+- [[Tutorial, Flows] Project Selection Problem](https://codeforces.com/blog/entry/101354)
 
 
 
@@ -169,4 +180,4 @@
 
   eg. sum(1/x) for x = 1 to 10^18, we can precalculate answer upto 10^7 and add the rest with ∫(1/x) dx => ln(x), so answer will be prec[1e7] + ln(1e18) - ln(1e7)
   
-- **FLOW: **Maximum independent set = number of vertices - maximum match (in bipartite graph)
+- **FLOW:** Maximum independent set = number of vertices - maximum match (in bipartite graph)
