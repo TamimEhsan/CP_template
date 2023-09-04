@@ -101,6 +101,7 @@ bool check(int N,int pos){return (bool)(N & (1<<pos));}
   - Offline
   - Online
 
+- Block Cut Tree
 - Condensation Graph
 - Dijkstra
 - Dominator Tree
