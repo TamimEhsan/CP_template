@@ -36,6 +36,7 @@ void dfs1(int u=0, int p=-1) {
 				adj2[u].push_back(n+bccI);
 				do {
 					adj2[n+bccI].push_back(st[sth-1]);
+					adj2[st[sth-1]].push_back(n+bccI);
 				} while(st[--sth]^v);
 				++bccI;
 			}
@@ -45,15 +46,17 @@ void dfs1(int u=0, int p=-1) {
 	}
 }
 
-void dfs2(int u=0) {
+
+void dfs2(int u=0,int par = -1) {
 	for(int i=1; i<19; ++i)
 		anc[u][i]=anc[anc[u][i-1]][i-1];
 	c[u]+=u<n;
 	for(int v : adj2[u]) {
+        if( v == par ) continue;
 		c[v]=c[u];
 		d[v]=d[u]+1;
 		anc[v][0]=u;
-		dfs2(v);
+		dfs2(v,u);
 	}
 }
 
@@ -77,34 +80,26 @@ int lca(int u, int v) {
 int main() {
 	ios::sync_with_stdio(0);
 	cin.tie(0);
-
-	cin >> n >> m;
-	int aa,bb,cc;
-	cin>>aa>>bb>>cc;
-	aa--;
-	bb--;
-	cc--;
+    int q;
+	cin >> n >> m >> q;
 	for(int i=0, u, v; i<m; ++i) {
 		cin >> u >> v, --u, --v;
 		adj1[u].push_back(v);
 		adj1[v].push_back(u);
 	}
-	dfs1(aa);
-	dfs2(aa);
-	int curr = cc;
+	dfs1();
+	dfs2();
 
-	while(curr!=aa){
-
-        curr = anc[curr][0];
-        if( anc[bb][0] == curr ){
-            cout<<"Yes";
-            return 0;
-        }
-
+	while(q--){
+        int a,b,c;
+        cin>>a>>b>>c;
+        a--,b--,c--;
+        int l = lca(a,b);
+        if( lca(a,c) == c and lca(c,l) == l ) cout<<"NO"<<endl;
+        else if( lca(b,c) == c and lca(c,l) == l ) cout<<"NO"<<endl;
+        else cout<<"YES"<<endl;
 	}
-	cout<<"No";
-	return 0;
 }
 
-
-// https://atcoder.jp/contests/abc318/tasks/abc318_g
+// https://cses.fi/problemset/task/1705/
+// also see https://atcoder.jp/contests/abc318/tasks/abc318_g

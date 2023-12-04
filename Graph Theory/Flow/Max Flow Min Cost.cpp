@@ -4,6 +4,8 @@ if we want k flow min cost, just add a dummy node with source with a edge with c
 
 If we want to find which edge contributed what amount, we can check the flow variable in edge,
 thus can reconstruct the flow graph too U w U
+
+if we want max flow max cost, then inverse the cost ie cost = -cost + offset
 */
 
 #include<bits/stdc++.h>

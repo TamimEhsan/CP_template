@@ -19,4 +19,7 @@ Problems of OJ other than LOJ and CSES
 | DZY Loves Fibonacci Numbers | CF       | [Problem](https://codeforces.com/contest/446/problem/C)      | Adding Fib seq on a range                                    |
 | Petya and Graph             | CF       | [Problem](https://codeforces.com/contest/1082/problem/G)     | Flow, Project and machines                                   |
 | Empire Strikes Back         | CF       | [Problem](https://codeforces.com/contest/300/problem/E)      | Factorizing factorials                                       |
+| Typical Path Problem        | Atcoder  | [Problem](https://atcoder.jp/contests/abc318/tasks/abc318_g) | Block Cut Tree                                               |
+| Power with Combinatorics    | APOJ     | [Problem](https://www.spoj.com/problems/POWPOW/)             | Mod with non prime numbers                                   |
+| Counting Rhyme              | CF       | [Problem](https://codeforces.com/contest/1884/problem/D)     | Finding the pairs of numbers in a array whose gcd is g (for all g) see editorial |
 

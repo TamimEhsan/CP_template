@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-
+#define ll long long
 /**
 Generalized CRT
 solves for x where
@@ -18,7 +18,7 @@ int GCD(int a, int b) {
 int LCM(int a, int b) {
     return (a/__gcd(a,b))*b;
 }
-inline long long normalize(long long x, long long mod) {
+long long normalize(long long x, long long mod) {
     x %= mod;
     if (x < 0) x += mod;
     return x;
@@ -31,29 +31,42 @@ GCD_type ex_GCD(long long a, long long b) {
     GCD_type pom = ex_GCD(b, a % b);
     return {pom.y, pom.x - a / b * pom.y, pom.d};
 }
-int testCases, t;
-long long r[N], m[N], ans, lcmm;
-void solve() {
-    cin >> t;
-    for(int i = 1; i <= t; i++) {
-        cin >> r[i] >> m[i];
-        normalize(r[i], m[i]);
+
+
+
+ll CRT(vector<ll>&r,vector<ll>&m){
+    for(int i=0;i<r.size();i++){
+        r[i] = normalize(r[i],m[i]);
     }
-    ans = r[1];
-    lcmm = m[1];
-    for(int i = 2; i <= t; i++) {
+    ll ans = r[0];
+    ll lcmm = m[0];
+    for(int i = 1; i < r.size(); i++) {
         auto pom = ex_GCD(lcmm, m[i]);
         int x1 = pom.x;
         int d = pom.d;
         if((r[i] - ans) % d != 0) {
-            cout<<"Impossible"<<endl;
-            return;
+            return -1;
         }
         ans = normalize(ans+x1*(r[i]-ans)/d%(m[i]/d)*lcmm,
                         lcmm*m[i]/d);
         lcmm = LCM(lcmm, m[i]);
     }
-    cout << ans << endl;
+    return ans;
+}
+
+void solve() {
+    int t;
+    cin >> t;
+    vector<ll> n(t),a(t);
+    for(int i = 0; i < t; i++) {
+        cin>>n[i]>>a[i];
+        if(  i%2 == 1 ){
+            a[i] = (n[i]-a[i])%n[i];
+        }
+    }
+    ll ans = CRT(a,n);
+    if( ans == -1 ) cout<<"Impossible"<<endl;
+    else cout << ans << endl;
 }
 signed main() {
     int tc;

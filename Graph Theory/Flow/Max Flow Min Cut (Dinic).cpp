@@ -86,6 +86,9 @@ struct Dinic {
         }
         return flow ;
     }
+    bool isUsed(edge e){
+        return e.flow!=0 and e.cap!=0;
+    }
 };
 
 void solve(){

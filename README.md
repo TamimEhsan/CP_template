@@ -53,6 +53,31 @@ bool check(int N,int pos){return (bool)(N & (1<<pos));}
 #pragma GCC optimize("O3")
 ```
 
+**Fast IO**
+
+````c++
+#define FASTIO ios_base::sync_with_stdio(false);cin.tie(NULL); cout.tie(NULL);
+#define endl '\n'
+````
+
+**Random Shuffle**
+
+```c++
+mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
+int my_rand(int r){return uniform_int_distribution<int>(1,r) (rng);}
+
+random_shuffle ( vec.begin(),vec.end(),my_rand );
+```
+
+**Making a vector values unique**
+
+```c++
+sort(a.begin(), a.end());
+a.erase(unique(a.begin(), a.end()), a.end());
+```
+
+
+
 
 
 <!-- Check the other extensions later C:\MinGW\lib\gcc\mingw32\9.2.0\include\c++\ext\pb_ds\detail -->

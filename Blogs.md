@@ -46,7 +46,8 @@
 
 - [Bitwise operations for beginners](https://codeforces.com/blog/entry/73490)
 - [Bitwise operations 2 — popcount & bitsets](https://codeforces.com/blog/entry/73558) 
-- - [OR Convolution for Common People](https://codeforces.com/blog/entry/115438)
+- [OR Convolution for Common People](https://codeforces.com/blog/entry/115438)
+- [bitset Find_first and Find_next](https://codeforces.com/blog/entry/43718)
 
 ### Data Structure
 
@@ -68,6 +69,7 @@
 - [Non-trivial DP tricks and Techniques](https://codeforces.com/blog/entry/47764)
 - [[Tutorial] Non-trivial DP Tricks and Techniques](https://codeforces.com/blog/entry/47764) 
 - [[Tutorial] Slope Trick](https://codeforces.com/blog/entry/47821) 
+- [Slope trick explained](https://codeforces.com/blog/entry/77298)
 - [[Tutorial] Convex Hull Trick — Geometry being useful](https://codeforces.com/blog/entry/63823)
 - [SOS Dynamic Programming [Tutorial]](https://codeforces.com/blog/entry/45223) 
 - [Dynamic Programming Optimizations](https://codeforces.com/blog/entry/8219)
